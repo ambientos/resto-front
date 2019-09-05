@@ -12,15 +12,16 @@ $img-dir: '../i/';
 $font-dir:	 '../fonts/';
 
 $font-main:  'OpenSans';
+$font-sub:   'MullerNarrow';
 
 $fonts:	(
-	( $font-main, 'regular', normal, 400, 20190904 ),
-	( $font-main, 'italic',  italic, 400, 20190904 ),
-	( $font-main, 'bold',    normal, 700, 20190904 ),
+	( $font-main, 'regular',    normal, 400, 20190904 ),
+	( $font-main, 'italic',     italic, 400, 20190904 ),
+	( $font-main, 'bold',       normal, 700, 20190904 ),
+	( $font-sub,  'light',      normal, 300, 20190904 ),
+	( $font-sub,  'extra-bold', normal, 800, 20190904 ),
 );
 
 //
 // Icons
 //
-
-$icons: (mail, tel, mark);

@@ -1,1 +1,67 @@
 header.header
+	.container
+		.header-container
+			.d-flex.flex-wrap.flex-md-nowrap.justify-content-around
+				figure.header-logo
+					a(href="/")
+						img(
+							src="i/logo.svg",
+							width="180",
+							alt="Resto Service"
+						)
+
+				.header-callback
+					span.btn.btn-primary Позвоните мне!
+
+				.header-phone
+					a.header-phone-num.tel(href="tel:+74952323232") 8-495-232-32-32
+
+				.header-socials
+					a.header-social._wa.ico(href='/')
+					a.header-social._tg.ico(href='/')
+					a.header-social._vb.ico(href='/')
+					a.header-social._sk.ico(href='/')
+
+				.header-cart
+					span.header-cart-num 4
+					span.header-cart-label 4 товара на сумму 34 500 руб.
+					a.header-cart-checkout(href="/") Оформить
+
+		nav.header-nav.navbar.navbar-expand-lg
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+
+			.collapse.navbar-collapse#navbarSupportedContent
+				ul.navbar-nav
+					li.nav-item
+						a.nav-link(href='/') О нас
+					li.nav-item
+						a.nav-link(href='/') Решения
+						ul
+							li.nav-item
+								a(href='/') Решение 1
+							li.nav-item
+								a(href='/') Решение 2
+					li.nav-item
+						a.nav-link(href='/') Услуги
+						ul
+							li.nav-item
+								a(href='/') Услуга 1
+							li.nav-item
+								a(href='/') Услуга 2
+					li.nav-item
+						a.nav-link(href='/') Магазин
+						ul
+							li.nav-item
+								a(href='/') Услуга 1
+							li.nav-item
+								a(href='/') Услуга 2
+					li.nav-item
+						a.nav-link(href='/') База знаний
+					li.nav-item
+						a.nav-link(href='/') Почему IIKO
+					li.nav-item
+						a.nav-link(href='/') Контакты
+
+				form.form-inline
+					button._search.ico(type='button')

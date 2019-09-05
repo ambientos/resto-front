@@ -5,7 +5,7 @@
 
 // Color system
 
-$white:    #fff !default;
+$white:    #fff    !default;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -15,7 +15,7 @@ $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
-$black:    #000 !default;
+$black:    #000    !default;
 
 $grays: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -50,14 +50,14 @@ $colors: () !default;
 $colors: map-merge(
   (
     "blue":       $blue,
-    "indigo":     $indigo,
-    "purple":     $purple,
-    "pink":       $pink,
+    //"indigo":     $indigo,
+    //"purple":     $purple,
+    //"pink":       $pink,
     "red":        $red,
-    "orange":     $orange,
+    //"orange":     $orange,
     "yellow":     $yellow,
     "green":      $green,
-    "teal":       $teal,
+    //"teal":       $teal,
     "cyan":       $cyan,
     "white":      $white,
     "gray":       $gray-600,
@@ -82,11 +82,11 @@ $theme-colors: map-merge(
     "primary":    $primary,
     "secondary":  $secondary,
     "success":    $success,
-    "info":       $info,
-    "warning":    $warning,
+    //"info":       $info,
+    //"warning":    $warning,
     "danger":     $danger,
-    "light":      $light,
-    "dark":       $dark
+    //"light":      $light,
+    //"dark":       $dark
   ),
   $theme-colors
 );
@@ -162,7 +162,7 @@ $sizes: map-merge(
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
-$body-color:                $gray-900 !default;
+$body-color:                $gray-700 !default;
 
 
 // Links
@@ -193,7 +193,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
+  xxl: 1500px,
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -208,7 +209,8 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
+  xxl: 1440px,
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -270,7 +272,7 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      $font-main, Arial, "Noto Sans", sans-serif !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
@@ -283,6 +285,7 @@ $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
 $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
+$font-weight-extra-bold:      800 !default;
 $font-weight-bolder:          bolder !default;
 
 $font-weight-base:            $font-weight-normal !default;

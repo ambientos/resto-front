@@ -1,0 +1,49 @@
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  overflow: hidden;
+  word-wrap: normal !important; }
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/OpenSans/regular.woff2?v=20190904") format("woff2"), url("../fonts/OpenSans/regular.woff?v=20190904") format("woff"); }
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url("../fonts/OpenSans/italic.woff2?v=20190904") format("woff2"), url("../fonts/OpenSans/italic.woff?v=20190904") format("woff"); }
+
+@font-face {
+  font-family: "OpenSans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/OpenSans/bold.woff2?v=20190904") format("woff2"), url("../fonts/OpenSans/bold.woff?v=20190904") format("woff"); }
+
+@font-face {
+  font-family: "MullerNarrow";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MullerNarrow/light.woff2?v=20190904") format("woff2"), url("../fonts/MullerNarrow/light.woff?v=20190904") format("woff"); }
+
+@font-face {
+  font-family: "MullerNarrow";
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MullerNarrow/extra-bold.woff2?v=20190904") format("woff2"), url("../fonts/MullerNarrow/extra-bold.woff?v=20190904") format("woff"); }
+
+/*# sourceMappingURL=site.css.map */
