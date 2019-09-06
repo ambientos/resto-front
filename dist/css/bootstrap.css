@@ -171,9 +171,7 @@ th {
 
 label {
   display: inline-block;
-  margin-bottom: 0.5rem;
-  font-size: 1.125rem;
-  font-weight: 700; }
+  margin-bottom: 0.5rem; }
 
 button {
   border-radius: 0; }
@@ -360,6 +358,9 @@ mark,
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto; }
+
+.img-rounded {
+  border-radius: 1rem; }
 
 .figure {
   display: inline-block; }
@@ -1430,10 +1431,20 @@ mark,
     vertical-align: top;
     border-top: 1px solid #dee2e6; }
   .table thead th {
+    font-size: 80%;
+    text-transform: uppercase;
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6; }
   .table tbody + tbody {
     border-top: 2px solid #dee2e6; }
+  .table tfoot {
+    -webkit-box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.18);
+            box-shadow: 0 5px 18px 0 rgba(0, 0, 0, 0.18); }
+    .table tfoot th,
+    .table tfoot td {
+      padding-left: 2em;
+      padding-right: 2em;
+      border: none; }
 
 .table-sm th,
 .table-sm td {
@@ -1464,13 +1475,13 @@ mark,
 .table-primary,
 .table-primary > th,
 .table-primary > td {
-  background-color: #f2c6c8; }
+  background-color: white; }
 
 .table-primary th,
 .table-primary td,
 .table-primary thead th,
 .table-primary tbody + tbody {
-  border-color: #e79498; }
+  border-color: white; }
 
 .table-hover .table-primary:hover {
   background-color: #edb1b4; }
@@ -1481,13 +1492,13 @@ mark,
 .table-secondary,
 .table-secondary > th,
 .table-secondary > td {
-  background-color: #c2c5c8; }
+  background-color: #f0f0f1; }
 
 .table-secondary th,
 .table-secondary td,
 .table-secondary thead th,
 .table-secondary tbody + tbody {
-  border-color: #8e9399; }
+  border-color: #dee0e2; }
 
 .table-hover .table-secondary:hover {
   background-color: #b5b8bc; }
@@ -1498,13 +1509,13 @@ mark,
 .table-success,
 .table-success > th,
 .table-success > td {
-  background-color: #c3e6cb; }
+  background-color: white; }
 
 .table-success th,
 .table-success td,
 .table-success thead th,
 .table-success tbody + tbody {
-  border-color: #8fd19e; }
+  border-color: #fbfefc; }
 
 .table-hover .table-success:hover {
   background-color: #b1dfbb; }
@@ -1515,13 +1526,13 @@ mark,
 .table-danger,
 .table-danger > th,
 .table-danger > td {
-  background-color: #f2c6c8; }
+  background-color: white; }
 
 .table-danger th,
 .table-danger td,
 .table-danger thead th,
 .table-danger tbody + tbody {
-  border-color: #e79498; }
+  border-color: white; }
 
 .table-hover .table-danger:hover {
   background-color: #edb1b4; }
@@ -1532,7 +1543,7 @@ mark,
 .table-active,
 .table-active > th,
 .table-active > td {
-  background-color: rgba(0, 0, 0, 0.075); }
+  background-color: rgba(43, 43, 43, 0.075); }
 
 .table-hover .table-active:hover {
   background-color: rgba(0, 0, 0, 0.075); }
@@ -1677,40 +1688,6 @@ select.form-control:focus::-ms-value {
   display: block;
   width: 100%; }
 
-.col-form-label {
-  padding-top: calc(0.706rem + 1px);
-  padding-bottom: calc(0.706rem + 1px);
-  margin-bottom: 0;
-  font-size: inherit;
-  line-height: 1.5; }
-
-.col-form-label-lg {
-  padding-top: calc(0.5rem + 1px);
-  padding-bottom: calc(0.5rem + 1px);
-  font-size: 1.25rem;
-  line-height: 1.5; }
-
-.col-form-label-sm {
-  padding-top: calc(0.625rem + 1px);
-  padding-bottom: calc(0.625rem + 1px);
-  font-size: 0.8125rem;
-  line-height: 1.5; }
-
-.form-control-plaintext {
-  display: block;
-  width: 100%;
-  padding-top: 0.706rem;
-  padding-bottom: 0.706rem;
-  margin-bottom: 0;
-  line-height: 1.5;
-  color: #5a5a5a;
-  background-color: transparent;
-  border: solid transparent;
-  border-width: 1px 0; }
-  .form-control-plaintext.form-control-sm, .form-control-plaintext.form-control-lg {
-    padding-right: 0;
-    padding-left: 0; }
-
 .form-control-sm {
   height: calc(1.5em + 1.25rem + 2px);
   padding: 0.625rem 1.875rem;
@@ -1770,13 +1747,23 @@ textarea.form-control {
       height: 21px;
       margin-right: .5em;
       vertical-align: top;
-      border-width: 3px;
+      border-width: 1px;
       border-style: solid;
-      border-color: #fff;
-      border-radius: .2em;
+      border-color: #ced4da;
+      border-radius: 0.2rem;
       cursor: pointer;
       background-color: #fff; }
-      [type="checkbox"]:checked + .form-check-custom-control {
+      [type="checkbox"]:checked + .form-check-custom-control::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 0.8em;
+        height: 0.8em;
+        margin: auto;
+        content: '';
+        border-radius: 0.2rem;
         background-color: #d03239; }
 
 .form-check-input {
@@ -2092,6 +2079,7 @@ textarea.form-control {
     text-decoration: underline; }
 
 .form-submit {
+  margin-top: 2.5em;
   text-align: center; }
 
 .btn {

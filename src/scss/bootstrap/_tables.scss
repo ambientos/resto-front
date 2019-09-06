@@ -16,12 +16,29 @@
   }
 
   thead th {
+    font-size: 80%;
+    text-transform: uppercase;
     vertical-align: bottom;
     border-bottom: (2 * $table-border-width) solid $table-border-color;
   }
 
   tbody + tbody {
     border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  tfoot {
+    box-shadow: 0 5px 18px 0 rgba($black, .18);
+
+    th,
+    td {
+      $padding-x: 2em;
+
+      padding: {
+        left: $padding-x;
+        right: $padding-x;
+      }
+      border: none;
+    }
   }
 }
 

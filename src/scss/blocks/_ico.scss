@@ -63,7 +63,7 @@
 
 	&[class*="_list-"] {
 		&::after {
-			$size: 90px;
+			$size: 70px;
 
 			flex: 0 0 $size;
 			max-width: $size;

@@ -1,13 +1,19 @@
 .widget {
-	margin-top: 4em;
+	$margin-y: 5em;
+
+	margin-top: $margin-y;
 	background: {
 		repeat: no-repeat;
 		position: 50% 50%;
 		size: cover;
 	}
 
-	&:not(:last-child) {
-		margin-bottom: 4em;
+	&:not(._nomargin):not(._dark) {
+		margin-bottom: $margin-y;
+	}
+
+	&._nomargin {
+		margin: 0;
 	}
 
 	&._dark {
@@ -23,5 +29,12 @@
 
 	&._important {
 		background: $primary;
+	}
+
+	&-title {
+		&._important {
+			padding-bottom: 1em;
+			border-bottom: 2px solid $gray-200;
+		}
 	}
 }

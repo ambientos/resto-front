@@ -77,55 +77,6 @@ select.form-control {
 // Labels
 //
 
-// For use with horizontal and inline forms, when you need the label (or legend)
-// text to align with the form controls.
-.col-form-label {
-  padding-top: calc(#{$input-padding-y} + #{$input-border-width});
-  padding-bottom: calc(#{$input-padding-y} + #{$input-border-width});
-  margin-bottom: 0; // Override the `<label>/<legend>` default
-  @include font-size(inherit); // Override the `<legend>` default
-  line-height: $input-line-height;
-}
-
-.col-form-label-lg {
-  padding-top: calc(#{$input-padding-y-lg} + #{$input-border-width});
-  padding-bottom: calc(#{$input-padding-y-lg} + #{$input-border-width});
-  @include font-size($input-font-size-lg);
-  line-height: $input-line-height-lg;
-}
-
-.col-form-label-sm {
-  padding-top: calc(#{$input-padding-y-sm} + #{$input-border-width});
-  padding-bottom: calc(#{$input-padding-y-sm} + #{$input-border-width});
-  @include font-size($input-font-size-sm);
-  line-height: $input-line-height-sm;
-}
-
-
-// Readonly controls as plain text
-//
-// Apply class to a readonly input to make it appear like regular plain
-// text (without any border, background color, focus indicator)
-
-.form-control-plaintext {
-  display: block;
-  width: 100%;
-  padding-top: $input-padding-y;
-  padding-bottom: $input-padding-y;
-  margin-bottom: 0; // match inputs if this class comes on inputs with default margins
-  line-height: $input-line-height;
-  color: $input-plaintext-color;
-  background-color: transparent;
-  border: solid transparent;
-  border-width: $input-border-width 0;
-
-  &.form-control-sm,
-  &.form-control-lg {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
 
 // Form control sizing
 //
@@ -220,7 +171,9 @@ textarea.form-control {
     &-control {
       $size: $grid-gutter-width * .7;
       $color: $white;
+      $color-light: $gray-400;
       $color-active: $red;
+      $radius: .2rem;
 
       display: inline-block;
       position: relative;
@@ -229,16 +182,30 @@ textarea.form-control {
       margin-right: .5em;
       vertical-align: top;
       border: {
-        width: 3px;
+        width: 1px;
         style: solid;
-        color: $color;
-        radius: .2em;
+        color: $color-light;
+        radius: $radius;
       }
       cursor: pointer;
       background-color: $color;
 
       [type="checkbox"]:checked + & {
-        background-color: $color-active;
+        &::before {
+          $size: .8em;
+
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: $size;
+          height: $size;
+          margin: auto;
+          content: '';
+          border-radius: $radius;
+          background-color: $color-active;
+        }
       }
     }
   }
@@ -393,5 +360,6 @@ textarea.form-control {
 //
 
 .form-submit {
+  margin-top: 2.5em;
   text-align: center;
 }

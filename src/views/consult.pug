@@ -1,0 +1,55 @@
+extends ./layout/layout.pug
+
+block meta
+	title Обучение и консалтинг
+
+block content
+	+promo({ bg: '51.jpg', title: 'Обучение по работе с IIKO', text: 'До сих пор не используете iiko на 100%?<br/> Не понимаете, как работает программа?<br/> Закажите обучение, мы поможем!', button: 'Оставить заявку' })
+
+	.container-inner.container
+		.widget
+			h2.widget-title._important Для чего нужно обучение?
+			.row
+				.col-md-4
+					figure
+						img.img-rounded(
+							src='t/52.jpg'
+							alt=''
+						)
+				.col-md-8
+					p Мы проводим комплексные и индивидуальные обучения по системе iiko. Наша главная задача обучить вас правильному ведению бизнеса в системе, ведь от этого будет зависеть результаты работы всего предприятия в целом.  Мы проводим мастер кассы по различным модулям программы. Наши специалисты имеют соответствующие сертификаты и большой опыт в сфере бизнеса HoReCa
+					p Если вы обращаетесь как частное лицо, то мы поможем вам увеличить свой доход на рынке труда и повысить лояльность со стороны руководства. Наши специалисты поделятся уникальным опытом и знаниями, а вы благодаря этому приумножите свою ценность и востребованность на рынке труда.
+					p В среднем для изучения системы айко «с нуля» потребуется от 6 до 10 часов. Обычно мы разделяем курсы на 2-3ч 2 раза в неделю.
+
+		.widget
+			h2.widget-title Мастер-классы мы можем проводить различными способами:
+			+list-ico([{'type': 'tv', 'title': 'Удаленно', 'text': 'наш специалист подключается к вам с помощью удаленного доступа, либо вы подключаетесь к нашему демо стенду, общаться можно по средствам любой удобной для вас связи (сотовая связь/месенджеры/Skype и прочее).'}, {'type': 'food', 'title': 'На объекте', 'text': 'Мы приедем к вам на предприятие и отработаем все навыки на вашем оборудовании.'}, {'type': 'home', 'title': 'На дому', 'text': 'Проведем индивидуальное обучение у вас дома.'}, {'type': 'coffee', 'title': 'По договоренности', 'text': 'Организуем встречу на нейтральной комфортной для обучения территории (к примеру встреча в кафе).'}])
+
+	.widget._dark(style='background-image:url(t/53.jpg)')
+		.container-inner.text-center.container
+			h2.widget-title Стоимость мастер-класса 1500 руб./час
+			p *в случае выезда нашего специалиста выдается минимум 2 часа обучения
+			.form-submit
+				span.btn-primary.btn Оставить заявку
+
+	.widget._nomargin._dark._important
+		.container-inner.container
+			.callback-form
+				form
+					h2.callback-form-title Остались вопросы?
+					p.callback-form-info Мы с удовольствием проконсультируем вас персонально по телефону или через электронную почту
+					.callback-form-control-group.form-group
+						input.form-control(type='text', placeholder='Имя')
+					.callback-form-control-group.form-group
+						input.form-control(type='email', placeholder='E-mail')
+					.callback-form-control-group.form-group
+						input.form-control(type='tel', placeholder='Телефон')
+					.callback-form-control-group.form-group
+						input.form-control(type='text', placeholder='Комментарий')
+					.form-group
+						.form-note
+							| Отправляя свои данные через эту форму, вы соглашаетесь с 
+							a(href='/') политикой обработки персональных данных
+					.form-group
+						.form-submit
+							input.btn-secondary.btn(type='submit', value='Свяжитесь со мной')

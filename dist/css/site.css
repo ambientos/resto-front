@@ -11,6 +11,12 @@
   overflow: hidden;
   word-wrap: normal !important; }
 
+.text-center {
+  text-align: center !important; }
+
+.text-right {
+  text-align: right !important; }
+
 @media (min-width: 1440px) {
   .container-inner {
     max-width: 1240px;
@@ -194,10 +200,10 @@
     background-image: url("../i/top-sk.svg"); }
   .ico[class*="_list-"]::after {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 90px;
-            flex: 0 0 90px;
-    max-width: 90px;
-    height: 90px;
+        -ms-flex: 0 0 70px;
+            flex: 0 0 70px;
+    max-width: 70px;
+    height: 70px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain; }
@@ -217,6 +223,20 @@
     background-image: url("../i/list-work.svg"); }
   .ico._list-workflow::after {
     background-image: url("../i/list-workflow.svg"); }
+  .ico._list-tv::after {
+    background-image: url("../i/list-tv.svg"); }
+  .ico._list-food::after {
+    background-image: url("../i/list-food.svg"); }
+  .ico._list-home::after {
+    background-image: url("../i/list-home.svg"); }
+  .ico._list-coffee::after {
+    background-image: url("../i/list-coffee.svg"); }
+  .ico._list-ofd::after {
+    background-image: url("../i/list-ofd.svg"); }
+  .ico._list-fn::after {
+    background-image: url("../i/list-fn.svg"); }
+  .ico._list-ribbon::after {
+    background-image: url("../i/list-ribbon.svg"); }
   .ico._search {
     width: 15px;
     height: 15px; }
@@ -239,12 +259,14 @@
     color: inherit; }
 
 .widget {
-  margin-top: 4em;
+  margin-top: 5em;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover; }
-  .widget:not(:last-child) {
-    margin-bottom: 4em; }
+  .widget:not(._nomargin):not(._dark) {
+    margin-bottom: 5em; }
+  .widget._nomargin {
+    margin: 0; }
   .widget._dark {
     padding: 5em 0;
     color: #fff;
@@ -254,6 +276,9 @@
       color: inherit; }
   .widget._important {
     background: #d03239; }
+  .widget-title._important {
+    padding-bottom: 1em;
+    border-bottom: 2px solid #e9ecef; }
 
 .promo-container {
   min-height: 710px;
@@ -296,9 +321,7 @@
         max-width: 50%;
         border-width: 2px;
         border-color: #e9ecef;
-        border-top-style: solid; }
-        .list-ico-item:nth-child(odd) {
-          border-right-style: solid; } }
+        border-top-style: solid; } }
     .list-ico-item::before, .list-ico-item::after {
       margin-right: 2rem; }
     .list-ico-item::before {
@@ -343,6 +366,9 @@
   z-index: 1; }
   .calc-form-item {
     padding: 2em 0; }
+    .calc-form-item label {
+      font-size: 1.125rem;
+      font-weight: 700; }
   .calc-form-qty {
     display: block;
     position: relative;

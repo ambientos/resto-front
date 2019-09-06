@@ -1,0 +1,86 @@
+extends ./layout/layout.pug
+
+block meta
+	title Поддержка 24
+
+block content
+	+promo({ bg: '48.jpg', title: 'Самая быстрая и&nbsp;понимающая поддержка', text: 'Мы действительно быстро и грамотно решаем все вопросы с системой в кратчайшие сроки, если вам не понравится - мы вернем вам деньги! Также мы дарим.', button: 'Оставить заявку' })
+
+	.container-inner.container
+		.widget
+			h2.widget-title Что входит в обслуживание?
+			+list-ico([{'type': 'work', 'title': 'Наш сотрудник у вас в штате', 'text': 'Для вашего заведения, мы выделим 2х сервисных специалистов, которые  будут курировать вас и знать все нюансы вашего бизнеса.'}, {'type': 'chat', 'title': 'Круглосуточная поддержка 24/7', 'text': 'Круглосуточно и без выходных мы готовы оперативно помогать нашим клиентам, достаточно только позвонить или написать нам сообщение по разным каналам связи.'}, {'type': 'truck', 'title': 'Неограниченные выезды', 'text': '85% всех проблем решаются нашими специалистами удаленно, в остальных случаях мы в кратчайшие сроки направим к вам специалиста для решения вашей проблемы.'}, {'type': 'pc', 'title': 'Подменное оборудование', 'text': 'На время ремонта вашего оборудования, мы предоставляем подменную технику!'}, {'type': 'int', 'title': 'Регулярные обновления iiko', 'text': 'В удобное для вас время производим плановые обновления системы до актуальной версии.'}, {'type': 'barcode', 'title': 'Решение проблем с ЕГАИС', 'text': 'Мы всегда в курсе всех изменений в законодательной базе и готовы решать ваши проблемы связанные с системой оборота.'}, {'type': 'ok', 'title': 'Бесперебойная работа предприятия', 'text': 'Мы контролируем правильную работу системы, регулярно выдаем рекомендации, выполняем профилактические выезды для осмотра оборудования. Мы стараемся, минимизировать сбои в работе вашей системы.'}, {'type': 'workflow', 'title': 'Удобная система сервис деск', 'text': 'Все ваши заявки учитываются в специальной системе. Вы всегда сможете посмотреть ход решения, а также отслеживать заявки своих коллег.'}])
+
+	.widget._dark(style='background-image:url(t/49.jpg)')
+		.container-inner.container
+			h2.widget-title Почему стоит выбрать абонентское обслуживание системы iiko от компании RESTO-SERVICE ?
+
+			.row
+				.col-md-6
+					p Наше конкурентное преимущество в отличии от других сервисных компаний &mdash; настоящий индивидуальный подход к каждому клиенту. Мы закрепим за вами двух специалистов, которые будут вести ваш объект. У вас сформируется впечатление, что данные сотрудники находятся у вас штате и всегда рады ответить на любые вопросы с понимаем проблемы на все 100% Убедитесь в этом сами ! Также нам можно будет писать в ватцап и телеграм!
+				.col-md-6
+					p У нас нет задачи «подсадить» как можно больше компаний на сервисную поддержку по самим низким ценам, и не справиться с объемом поставленных задач. У нас совершенно иное представление о данном сервисе. Наше качество предоставляемых услуг превосходит стоимость. Если вам не понравится, мы вернем вам деньги!
+
+	.container-inner.container
+		.widget
+			h2.widget-title Калькулятор стоимости абонентского обслуживания
+
+			.calc
+				.calc-form(style='background-image:url(t/50.jpg)')
+					form
+						.calc-form-item
+							.row
+								.col-md-6
+									.form-check.form-group
+										label.form-check-label
+											input.form-check-input(type='checkbox', value='')
+											|  Выезды не требуются, нужна только удаленная поддержка
+									.form-check.form-group
+										label.form-check-label
+											input.form-check-input(type='checkbox', value='')
+											|  Обслуживание системы ЕГАИС
+								.col-md-6
+									.row
+										.col-md-6
+											.form-group
+												label(for='input-1') Количество ПК
+												input.calc-form-qty-control.form-control#input-1(type='number', value='2')
+										.col-md-6
+											.form-group
+												label Стоимость услуги
+												.calc-form-total
+													span.calc-form-total-v 750
+													|  руб./мес.
+						.calc-form-item
+							.row
+								.col-md-6
+									.calc-form-info 10% скидка &mdash; при оплате за 6 месяцев
+								.col-md-6
+									.calc-form-info 15% скидка &mdash; при оплате за 1 год
+						.calc-form-submit.form-submit
+							input.btn-primary.btn(type='submit', value='Оставить заявку')
+				.calc-info
+					| Если у вас присутствуют онлайн кассы, мы можем комплексно взять их также на обслуживание
+					a(href='/')  подробнее по ссылке
+
+	.widget._dark._important
+		.container-inner.container
+			.callback-form
+				form
+					h2.callback-form-title Остались вопросы?
+					p.callback-form-info Мы с удовольствием проконсультируем вас персонально по телефону или через электронную почту
+					.callback-form-control-group.form-group
+						input.form-control(type='text', placeholder='Имя')
+					.callback-form-control-group.form-group
+						input.form-control(type='email', placeholder='E-mail')
+					.callback-form-control-group.form-group
+						input.form-control(type='tel', placeholder='Телефон')
+					.callback-form-control-group.form-group
+						input.form-control(type='text', placeholder='Комментарий')
+					.form-group
+						.form-note
+							| Отправляя свои данные через эту форму, вы соглашаетесь с 
+							a(href='/') политикой обработки персональных данных
+					.form-group
+						.form-submit
+							input.btn-secondary.btn(type='submit', value='Свяжитесь со мной')
