@@ -14,31 +14,7 @@ block content
 		.widget
 			h2.widget-title Разовые услуги по ККТ
 
-			- var serviceList = [{'type': 'Регистрация ККТ в налоговой', 'price': '2500 руб.'}, {'type': 'Годовое подключение к ОФД', 'price': '3000 руб.'}, {'type': 'Изготовление ЭЦП (электронно-цифровой подписи)', 'price': '3000 руб.'}, {'type': 'Перерегистрация ККТ без замены ФН', 'price': '2000 руб.'}, {'type': 'Перерегистрация ККТ с заменой ФН', 'price': '3500 руб.'}, {'type': 'Снятие с учета ККТ', 'price': '1500 руб.'}, {'type': 'Программирование/настройка ККТ', 'price': 'от 1000 руб.'}, {'type': 'Замена ФН', 'price': '3500 руб.'}, {'type': 'Ремонт/замена комплектующих', 'price': 'от 2000 руб. + стоимость детали'}]
-
-			.table-responsive-sm
-				table.table.table-bordered
-					thead
-						tr.table-secondary
-							th Услуга
-							th Стоимость
-					tbody
-						each service in serviceList
-							tr
-								td
-									span.form-check
-										label.form-check-label
-											input.form-check-input(type='checkbox', value='')
-											span= service.type
-								td= service.price
-					tfoot
-						tr
-							td(colspan='2')
-								.row.align-items-sm-center
-									.col-md-6
-										b Выбрано 2 услуги
-									.col-md-6.text-right
-										span.btn-primary.btn-sm.btn Оставить заявку
+			+services-table([{'type': 'Регистрация ККТ в налоговой', 'price': '2500 руб.'}, {'type': 'Годовое подключение к ОФД', 'price': '3000 руб.'}, {'type': 'Изготовление ЭЦП (электронно-цифровой подписи)', 'price': '3000 руб.'}, {'type': 'Перерегистрация ККТ без замены ФН', 'price': '2000 руб.'}, {'type': 'Перерегистрация ККТ с заменой ФН', 'price': '3500 руб.'}, {'type': 'Снятие с учета ККТ', 'price': '1500 руб.'}, {'type': 'Программирование/настройка ККТ', 'price': 'от 1000 руб.'}, {'type': 'Замена ФН', 'price': '3500 руб.'}, {'type': 'Ремонт/замена комплектующих', 'price': 'от 2000 руб. + стоимость детали'}])
 
 		.widget
 			h2.widget-title._important Заключите договор сервисного обслуживания

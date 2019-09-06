@@ -1,0 +1,24 @@
+mixin services-table(serviceList)
+	.table-responsive-sm
+		table.table.table-bordered
+			thead
+				tr.table-secondary
+					th Услуга
+					th Стоимость
+			tbody
+				each service in serviceList
+					tr
+						td
+							span.form-check
+								label.form-check-label
+									input.form-check-input(type='checkbox', value='')
+									span= service.type
+						td= service.price
+			tfoot
+				tr
+					td(colspan='2')
+						.row.align-items-sm-center
+							.col-md-6
+								b Выбрано 2 услуги
+							.col-md-6.text-right
+								span.btn-primary.btn-sm.btn Оставить заявку
