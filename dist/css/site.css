@@ -194,4 +194,44 @@
     height: 20px;
     background-image: url("../i/cart.svg"); }
 
+.breadcrumbs {
+  margin-bottom: 2em;
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff; }
+  .breadcrumbs .delimiter {
+    margin: 0 .9em 0 .7em;
+    font-size: 90%;
+    vertical-align: top; }
+  .breadcrumbs a {
+    color: inherit; }
+
+.promo-container {
+  min-height: 710px;
+  padding: 24px 30px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; }
+
+.promo-content {
+  max-width: 560px;
+  padding: 60px;
+  background-color: #fff; }
+
+.promo-title {
+  margin-bottom: .5em;
+  font-family: "MullerNarrow";
+  font-size: 3.125rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #26303b; }
+
+.promo-text {
+  font-size: 1.125rem; }
+
+.promo-more {
+  margin-top: 2em; }
+
 /*# sourceMappingURL=site.css.map */

@@ -1,0 +1,19 @@
+.breadcrumbs {
+	margin-bottom: 2em;
+	font: {
+		size: .75rem;
+		weight: $font-weight-bold;
+	}
+	text-transform: uppercase;
+	color: $white;
+
+	.delimiter {
+		margin: 0 .9em 0 .7em;
+		font-size: 90%;
+		vertical-align: top;
+	}
+
+	a {
+		color: inherit;
+	}
+}

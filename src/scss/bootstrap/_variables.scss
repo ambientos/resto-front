@@ -384,10 +384,10 @@ $table-border-level:          -6 !default;
 //
 // Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
 
-$input-btn-padding-y:         .375rem !default;
-$input-btn-padding-x:         .75rem !default;
+$input-btn-padding-y:         1rem !default;
+$input-btn-padding-x:         1.8rem !default;
 $input-btn-font-family:       null !default;
-$input-btn-font-size:         .875 !default;
+$input-btn-font-size:         .875rem !default;
 $input-btn-line-height:       $line-height-base !default;
 
 $input-btn-focus-width:       .2rem !default;
@@ -441,7 +441,7 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-block-spacing-y:         .5rem !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           $border-radius * 5 !default;
+$btn-border-radius:           $border-radius * 7 !default;
 $btn-border-radius-lg:        $border-radius-lg * 5 !default;
 $btn-border-radius-sm:        $border-radius-sm * 7 !default;
 

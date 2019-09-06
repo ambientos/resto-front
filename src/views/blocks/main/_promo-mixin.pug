@@ -1,0 +1,26 @@
+mixin promo(object)
+	.promo
+		.container
+			.promo-container(style='background-image:url(t/'+ object.bg +')')
+				.promo-breadcrumbs.breadcrumbs(typeof='BreadcrumbList', vocab='http://schema.org/')
+					span(property='itemListElement', typeof='ListItem')
+						a(property='item', typeof='WebPage', href='/')
+							span(property='name') Главная
+							meta(property='position', content='1')
+					span.delimiter »
+					span(property='itemListElement', typeof='ListItem')
+						a(property='item', typeof='WebPage', href='/')
+							span(property='name') Услуги
+							meta(property='position', content='2')
+
+				.promo-content
+					if ( object.title )
+						.promo-title!= object.title
+
+					if ( object.text )
+						.promo-text
+							p= object.text
+
+					if ( object.button )
+						.promo-more
+							span.btn-primary.btn= object.button
