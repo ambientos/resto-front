@@ -203,6 +203,45 @@ textarea.form-control {
   position: relative;
   display: block;
   padding-left: $form-check-input-gutter;
+
+  &-wrap {
+    position: absolute;
+    left: 0;
+    top: .2em;
+
+    [type="checkbox"] {
+      display: none;
+    }
+  }
+
+  &-custom {
+    padding-left: 2em;
+
+    &-control {
+      $size: $grid-gutter-width * .7;
+      $color: $white;
+      $color-active: $red;
+
+      display: inline-block;
+      position: relative;
+      width: $size;
+      height: $size;
+      margin-right: .5em;
+      vertical-align: top;
+      border: {
+        width: 3px;
+        style: solid;
+        color: $color;
+        radius: .2em;
+      }
+      cursor: pointer;
+      background-color: $color;
+
+      [type="checkbox"]:checked + & {
+        background-color: $color-active;
+      }
+    }
+  }
 }
 
 .form-check-input {
@@ -327,4 +366,32 @@ textarea.form-control {
       margin-bottom: 0;
     }
   }
+}
+
+
+//
+// Note
+//
+
+.form-note {
+  font-size: .8125rem;
+
+  ._dark & {
+    a {
+      color: inherit;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+
+//
+// Submit
+//
+
+.form-submit {
+  text-align: center;
 }

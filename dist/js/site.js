@@ -1,60 +1,45 @@
 (function($){
-	var body = $('body')
-
-
 	/**
-	 * Mobile menu
+	 * Custom checkboxes
 	 */
 
-	var mobileMenu = $('.mobile-main-menu')
+	$('[type="checkbox"]').each(function(){
+		var checkbox = $(this),
+			parent = checkbox.parents('.form-check').eq(0)
 
-	var mobileMenuToggle = $('.header-menu-toggle')
-		.on('menu.show', function(){
-			body.addClass('is-mobile-menu-show')
-		})
-		.on('menu.hide', function(){
-			body.removeClass('is-mobile-menu-show')
-		})
-		.on('click', function(){
-			mobileMenuToggle.trigger('menu.show')
-		})
+		parent.addClass('form-check-custom')
 
-	mobileMenu.parent().after('<div class="mobile-menu-close" title="Закрыть меню"></div>')
-
-	$('.mobile-menu-close').on('click', function(){
-		mobileMenuToggle.trigger('menu.hide')
-	})
-
-	$('.mobile-menu-overlay').on('click', function(){
-		mobileMenuToggle.trigger('menu.hide')
+		checkbox
+			.wrap('<span class="form-check-wrap"/>')
+			.after('<span class="form-check-custom-control"/>')
 	})
 
 
 	/**
-	 * Owl Carousel
+	 * Qty calc control
 	 */
-	
-	$('.carousel-container').each(function(){
-		var container = $(this),
-			carousel = container.find('.carousel')
 
-		carousel.owlCarousel({
-			items: 1,
-			margin: 0,
-			loop: true,
-			nav: false,
-			dots: true,
-			dotsContainer: container.find('.carousel-nav')
+	$('.calc-form-qty-control').each(function(){
+		var control = $(this)
+
+		control.wrap('<span class="calc-form-qty"/>')
+			.before('<span class="calc-form-qty-toggle _minus">&minus;</span>')
+			.after('<span class="calc-form-qty-toggle _plus">+</span></span>')
+
+		var toggle = control.parents('.calc-form-qty').eq(0).find('.calc-form-qty-toggle')
+
+		toggle.on('click', function(e){
+			var toggle = $(this),
+				controlValue = control.val()
+
+			if ( toggle.hasClass('_minus') ) {
+				if ( controlValue > 1 ) {
+					control.val( --controlValue )
+				}
+			}
+			else {
+				control.val( ++controlValue )
+			}
 		})
-	})
-
-
-	/**
-	 * Popup close button
-	 */
-
-	$('.popup-callback-close').on('click', function(e){
-		e.preventDefault()
-		$.fancybox.close()
 	})
 })(jQuery)

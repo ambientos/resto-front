@@ -26,37 +26,62 @@ block content
 			h2.widget-title Калькулятор стоимости абонентского обслуживания
 
 			.calc
-				.calc-form
+				.calc-form(style='background-image:url(t/50.jpg)')
 					form
-						.row
-							.col-md-6
-								.form-check.form-group
-									label.form-check-label
-										input.form-check-input(type='checkbox', value='')
-										|  Выезды не требуются, нужна только удаленная поддержка
-								.form-check.form-group
-									label.form-check-label
-										input.form-check-input(type='checkbox', value='')
-										|  Обслуживание системы ЕГАИС
-							.col-md-6
-								.row
-									.col-md-6
-										.form-group
-											label(for='input-1') Количество ПК
-											input.form-control#input-1(type='text', value='2')
-									.col-md-6
-										.form-group
-											label Стоимость услуги
-											.calc-form-total
-												span.calc-form-total-v 750
-												|  руб./мес.
-							.col-md-6
-								.calc-form-info 10% скидка &mdash; при оплате за 6 месяцев
-							.col-md-6
-								.calc-form-info 15% скидка &mdash; при оплате за 1 год
-						.calc-form-submit
+						.calc-form-item
+							.row
+								.col-md-6
+									.form-check.form-group
+										label.form-check-label
+											input.form-check-input(type='checkbox', value='')
+											|  Выезды не требуются, нужна только удаленная поддержка
+									.form-check.form-group
+										label.form-check-label
+											input.form-check-input(type='checkbox', value='')
+											|  Обслуживание системы ЕГАИС
+								.col-md-6
+									.row
+										.col-md-6
+											.form-group
+												label(for='input-1') Количество ПК
+												input.calc-form-qty-control.form-control#input-1(type='number', value='2')
+										.col-md-6
+											.form-group
+												label Стоимость услуги
+												.calc-form-total
+													span.calc-form-total-v 750
+													|  руб./мес.
+						.calc-form-item
+							.row
+								.col-md-6
+									.calc-form-info 10% скидка &mdash; при оплате за 6 месяцев
+								.col-md-6
+									.calc-form-info 15% скидка &mdash; при оплате за 1 год
+						.calc-form-submit.form-submit
 							input.btn-primary.btn(type='submit', value='Оставить заявку')
 				.calc-info
 					| Если у вас присутствуют онлайн кассы, мы можем комплексно взять их также на обслуживание
 					a(href='/')  подробнее по ссылке
+
+	.widget._dark._important
+		.container-inner.container
+			.callback-form
+				form
+					h2.callback-form-title Остались вопросы?
+					p.callback-form-info Мы с удовольствием проконсультируем вас персонально по телефону или через электронную почту
+					.callback-form-control-group.form-group
+						input.form-control(type='text', placeholder='Имя')
+					.callback-form-control-group.form-group
+						input.form-control(type='email', placeholder='E-mail')
+					.callback-form-control-group.form-group
+						input.form-control(type='tel', placeholder='Телефон')
+					.callback-form-control-group.form-group
+						input.form-control(type='text', placeholder='Комментарий')
+					.form-group
+						.form-note
+							| Отправляя свои данные через эту форму, вы соглашаетесь с 
+							a(href='/') политикой обработки персональных данных
+					.form-group
+						.form-submit
+							input.btn-secondary.btn(type='submit', value='Свяжитесь со мной')
 
