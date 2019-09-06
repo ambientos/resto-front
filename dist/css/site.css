@@ -13,7 +13,7 @@
 
 @media (min-width: 1440px) {
   .container-inner {
-    max-width: 1210px;
+    max-width: 1240px;
     margin-left: auto;
     margin-right: auto; } }
 
@@ -239,7 +239,17 @@
     color: inherit; }
 
 .widget {
-  margin: 3em 0; }
+  margin: 4em 0;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover; }
+  .widget._dark {
+    padding: 5em 0;
+    color: #fff;
+    background-color: #212529; }
+    .widget._dark .widget-title {
+      margin-bottom: 1.5em;
+      color: inherit; }
 
 .promo-container {
   min-height: 710px;
