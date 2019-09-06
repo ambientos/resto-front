@@ -1,0 +1,65 @@
+.ico {
+	display: inline-block;
+	vertical-align: middle;
+
+	&:first-child {
+		margin-right: .5em;
+	}
+
+	&::before {
+		display: inline-block;
+		vertical-align: top;
+		content: '';
+		background: {
+			repeat: no-repeat;
+			position: 50% 50%;
+			size: contain;
+		}
+	}
+
+	&-primary {
+		@include transition;
+
+		&._white {
+			fill: $white;
+		}
+
+		*:hover > & {
+			fill: $red;
+		}
+	}
+
+	&[class*="_top-"] {
+		&::before {
+			$size: 30px;
+
+			width: $size;
+			height: $size;
+		}
+	}
+
+	@each $ico in $top-icons {
+		&._top-#{$ico} {
+			&::before {
+				background-image: url('#{$img-dir}top-#{$ico}.svg');
+			}
+		}
+	}
+
+	&._search {
+		$size: 15px;
+
+		width: $size;
+		height: $size;
+	}
+
+	&._cart-mini {
+		&::before {
+			$size: 20px;
+
+			width: $size;
+			height: $size;
+			background-image: url('#{$img-dir}cart.svg');
+		}
+	}
+}

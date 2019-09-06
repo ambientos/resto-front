@@ -35,25 +35,6 @@
 }
 
 
-// Navbar brand
-//
-// Used for brand, project, or site names.
-
-.navbar-brand {
-  display: inline-block;
-  padding-top: $navbar-brand-padding-y;
-  padding-bottom: $navbar-brand-padding-y;
-  margin-right: $navbar-padding-x;
-  @include font-size($navbar-brand-font-size);
-  line-height: inherit;
-  white-space: nowrap;
-
-  @include hover-focus {
-    text-decoration: none;
-  }
-}
-
-
 // Navbar nav
 //
 // Custom navbar navigation (doesn't require `.nav`, but does make use of `.nav-link`).
@@ -69,22 +50,6 @@
     padding-right: 0;
     padding-left: 0;
   }
-
-  .dropdown-menu {
-    position: static;
-    float: none;
-  }
-}
-
-
-// Navbar text
-//
-//
-
-.navbar-text {
-  display: inline-block;
-  padding-top: $nav-link-padding-y;
-  padding-bottom: $nav-link-padding-y;
 }
 
 
@@ -106,6 +71,7 @@
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
+  margin: .4em 0;
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;

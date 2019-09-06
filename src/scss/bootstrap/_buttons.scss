@@ -10,16 +10,21 @@
   font-weight: $btn-font-weight;
   color: $body-color;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .1ex;
   vertical-align: middle;
   user-select: none;
+  cursor: pointer;
   background-color: transparent;
   border: $btn-border-width solid transparent;
+  box-shadow: 0 5px 10px 0 rgba($black, .25);
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
   @include hover {
     color: $body-color;
     text-decoration: none;
+    box-shadow: 0 2px 5px 0 rgba($black, .25);
   }
 
   &:focus,
@@ -49,6 +54,18 @@
 a.btn.disabled,
 fieldset:disabled a.btn {
   pointer-events: none;
+}
+
+//
+// Icons
+//
+.btn-ico {
+  padding: .3rem;
+
+  &,
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 

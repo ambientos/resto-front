@@ -46,4 +46,152 @@
   font-display: swap;
   src: url("../fonts/MullerNarrow/extra-bold.woff2?v=20190904") format("woff2"), url("../fonts/MullerNarrow/extra-bold.woff?v=20190904") format("woff"); }
 
+.header-container {
+  padding-top: 2em;
+  padding-bottom: 1em; }
+
+.header-logo {
+  margin-bottom: 0; }
+
+.header-phone-num {
+  font-family: "MullerNarrow";
+  font-size: 1.5rem;
+  font-weight: 800; }
+  .header-phone-num svg {
+    width: 20px; }
+
+.header-social-item:not(:last-child) {
+  margin-right: .5em; }
+
+.header-cart {
+  position: relative;
+  max-width: 250px;
+  padding-left: 45px;
+  font-family: "MullerNarrow";
+  font-size: .9375rem;
+  font-weight: 800;
+  letter-spacing: .1ex;
+  line-height: 1.3;
+  color: #26303b; }
+  .header-cart::before {
+    position: absolute;
+    left: 0;
+    top: .7em; }
+  .header-cart-num {
+    position: absolute;
+    left: .8em;
+    top: .4em;
+    padding: 0 .35em;
+    font-family: "OpenSans";
+    font-size: .875rem;
+    color: #fff;
+    border-radius: 50%;
+    background: #d03239; }
+  .header-cart-num, .header-cart-label, .header-cart-checkout {
+    display: block; }
+  .header-cart-sum {
+    white-space: nowrap; }
+  .header-cart-checkout {
+    text-transform: lowercase;
+    color: #d03239; }
+
+.header-nav {
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #26303b; }
+  .header-nav-list li {
+    position: relative;
+    font-family: "MullerNarrow";
+    font-size: .9375rem;
+    font-weight: 800;
+    text-transform: uppercase; }
+    .header-nav-list li:hover > ul {
+      opacity: 1;
+      visibility: visible; }
+    .header-nav-list li:hover a {
+      background-color: #303d4b; }
+    .header-nav-list li.menu-item-has-children > a::after {
+      display: inline-block;
+      width: 7px;
+      height: 21px;
+      margin-left: 1em;
+      vertical-align: top;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-image: url("../i/down.svg");
+      background-size: contain; }
+  .header-nav-list ul {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    min-width: 260px;
+    padding-left: 0;
+    padding-top: .4em;
+    padding-bottom: .4em;
+    list-style: none;
+    background-color: #303d4b;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .header-nav-list ul {
+        -webkit-transition: none;
+        transition: none; } }
+    .header-nav-list ul li {
+      font-family: "OpenSans";
+      font-size: .875rem;
+      font-weight: 400; }
+    .header-nav-list ul a {
+      padding-top: 0.7em;
+      padding-bottom: 0.7em; }
+      .header-nav-list ul a:hover {
+        background-color: #26303b; }
+  .header-nav a {
+    display: block;
+    color: inherit; }
+
+.ico {
+  display: inline-block;
+  vertical-align: middle; }
+  .ico:first-child {
+    margin-right: .5em; }
+  .ico::before {
+    display: inline-block;
+    vertical-align: top;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain; }
+  .ico-primary {
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .ico-primary {
+        -webkit-transition: none;
+        transition: none; } }
+    .ico-primary._white {
+      fill: #fff; }
+    *:hover > .ico-primary {
+      fill: #d03239; }
+  .ico[class*="_top-"]::before {
+    width: 30px;
+    height: 30px; }
+  .ico._top-wa::before {
+    background-image: url("../i/top-wa.svg"); }
+  .ico._top-tg::before {
+    background-image: url("../i/top-tg.svg"); }
+  .ico._top-vb::before {
+    background-image: url("../i/top-vb.svg"); }
+  .ico._top-sk::before {
+    background-image: url("../i/top-sk.svg"); }
+  .ico._search {
+    width: 15px;
+    height: 15px; }
+  .ico._cart-mini::before {
+    width: 20px;
+    height: 20px;
+    background-image: url("../i/cart.svg"); }
+
 /*# sourceMappingURL=site.css.map */

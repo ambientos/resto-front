@@ -1,1 +1,177 @@
-.header {}
+.header {
+	&-container {
+		padding: {
+			top: 2em;
+			bottom: 1em;
+		}
+	}
+
+	&-logo {
+		margin-bottom: 0;
+	}
+
+	&-phone {
+		&-num {
+			font: {
+				family: $font-sub;
+				size: 1.5rem;
+				weight: $font-weight-extra-bold;
+			}
+
+			svg {
+				width: 20px;
+			}
+		}
+	}
+
+	&-social {
+		&-item:not(:last-child) {
+			margin-right: .5em;
+		}
+	}
+
+	&-cart {
+		position: relative;
+		max-width: 250px;
+		padding-left: $grid-gutter-width * 1.5;
+		font: {
+			family: $font-sub;
+			size: .9375rem;
+			weight: $font-weight-extra-bold;
+		}
+		letter-spacing: .1ex;
+		line-height: 1.3;
+		color: $navy;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			top: .7em;
+		}
+
+		&-num {
+			position: absolute;
+			left: .8em;
+			top: .4em;
+			padding: 0 .35em;
+			font: {
+				family: $font-main;
+				size: .875rem;
+			}
+			color: $white;
+			border-radius: 50%;
+			background: $red;
+		}
+
+		&-num,
+		&-label,
+		&-checkout {
+			display: block;
+		}
+
+		&-sum {
+			white-space: nowrap;
+		}
+
+		&-checkout {
+			text-transform: lowercase;
+			color: $link-hover-color;
+		}
+	}
+
+	&-nav {
+		$bg-menu: $secondary;
+		$bg-menu-hover: lighten($bg-menu, 5%);
+
+		padding: {
+			top: 0;
+			bottom: 0;
+		}
+		background-color: $bg-menu;
+
+		&-list {
+			li {
+				position: relative;
+				font: {
+					family: $font-sub;
+					size: .9375rem;
+					weight: $font-weight-extra-bold;
+				}
+				text-transform: uppercase;
+
+				&:hover {
+					& > ul {
+						opacity: 1;
+						visibility: visible;
+					}
+
+					a {
+						background-color: $bg-menu-hover;
+					}
+				}
+
+				&.menu-item-has-children {
+					& > a::after {
+						$size: 7px;
+
+						display: inline-block;
+						width: $size;
+						height: $size * 3;
+						margin-left: 1em;
+						vertical-align: top;
+						content: '';
+						background: {
+							repeat: no-repeat;
+							position: 50% 50%;
+							image: url('#{$img-dir}down.svg');
+							size: contain;
+						}
+					}
+				}
+			}
+
+			ul {
+				position: absolute;
+				left: 0;
+				top: 100%;
+				min-width: 260px;
+				padding: {
+					left: 0;
+					top: .4em;
+					bottom: .4em;
+				}
+				list-style: none;
+				background-color: $bg-menu-hover;
+				opacity: 0;
+				visibility: hidden;
+				@include transition;
+
+				li {
+					font: {
+						family: $font-main;
+						size: .875rem;
+						weight: $font-weight-normal;
+					}
+				}
+
+				a {
+					$padding-y: .7em;
+
+					padding: {
+						top: $padding-y;
+						bottom: $padding-y;
+					}
+
+					&:hover {
+						background-color: $bg-menu;
+					}
+				}
+			}
+		}
+
+		a {
+			display: block;
+			color: inherit;
+		}
+	}
+}
