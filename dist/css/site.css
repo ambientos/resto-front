@@ -155,7 +155,7 @@
 .ico {
   display: inline-block;
   vertical-align: middle; }
-  .ico:first-child {
+  .ico:first-child:not(div) {
     margin-right: .5em; }
   .ico::before {
     display: inline-block;
@@ -225,13 +225,24 @@
   font-size: 3.125rem;
   font-weight: 800;
   line-height: 1.1;
-  text-transform: uppercase;
-  color: #26303b; }
+  text-transform: uppercase; }
 
 .promo-text {
   font-size: 1.125rem; }
 
 .promo-more {
   margin-top: 2em; }
+
+@media (min-width: 768px) {
+  .list-ico-item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+    border-width: 2px;
+    border-color: #e9ecef;
+    border-top-style: solid; }
+    .list-ico-item:nth-child(odd) {
+      border-right-style: solid; } }
 
 /*# sourceMappingURL=site.css.map */

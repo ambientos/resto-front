@@ -2,7 +2,7 @@
 	display: inline-block;
 	vertical-align: middle;
 
-	&:first-child {
+	&:first-child:not(div) {
 		margin-right: .5em;
 	}
 

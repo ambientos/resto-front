@@ -1,0 +1,21 @@
+.list {
+	&-ico {
+		&-item {
+			@include media-breakpoint-up("md") {
+				$width: 50%;
+
+				flex: 0 0 $width;
+				max-width: $width;
+				border: {
+					width: 2px;
+					color: $gray-200;
+					top-style: solid;
+				}
+
+				&:nth-child(odd) {
+					border-right-style: solid;
+				}
+			}
+		}
+	}
+}
