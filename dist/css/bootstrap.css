@@ -417,7 +417,7 @@ mark,
   @media (min-width: 1200px) {
     .container {
       max-width: 1140px; } }
-  @media (min-width: 1500px) {
+  @media (min-width: 1440px) {
     .container {
       max-width: 1440px; } }
 
@@ -1288,7 +1288,7 @@ mark,
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .col-xxl {
     -ms-flex-preferred-size: 0;
         flex-basis: 0;
@@ -1628,7 +1628,7 @@ mark,
     .table-responsive-xl > .table-bordered {
       border: 0; } }
 
-@media (max-width: 1499.98px) {
+@media (max-width: 1439.98px) {
   .table-responsive-xxl {
     display: block;
     width: 100%;
@@ -2690,13 +2690,13 @@ input[type="button"].btn-block {
     .navbar-expand-xl .navbar-toggler {
       display: none; } }
 
-@media (max-width: 1499.98px) {
+@media (max-width: 1439.98px) {
   .navbar-expand-xxl > .container,
   .navbar-expand-xxl > .container-fluid {
     padding-right: 0;
     padding-left: 0; } }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .navbar-expand-xxl {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3094,7 +3094,7 @@ button.bg-danger:focus {
     display: -ms-inline-flexbox !important;
     display: inline-flex !important; } }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .d-xxl-none {
     display: none !important; }
   .d-xxl-inline {
@@ -3828,7 +3828,7 @@ button.bg-danger:focus {
     -ms-flex-item-align: stretch !important;
         align-self: stretch !important; } }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .flex-xxl-row {
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
@@ -3993,7 +3993,7 @@ button.bg-danger:focus {
   .float-xl-none {
     float: none !important; } }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .float-xxl-left {
     float: left !important; }
   .float-xxl-right {
@@ -5495,7 +5495,7 @@ button.bg-danger:focus {
   .mx-xl-auto {
     margin-left: auto !important; } }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .m-xxl-0 {
     margin: 0 !important; }
   .mt-xxl-0,
@@ -5807,7 +5807,7 @@ button.bg-danger:focus {
   .text-xl-center {
     text-align: center !important; } }
 
-@media (min-width: 1500px) {
+@media (min-width: 1440px) {
   .text-xxl-left {
     text-align: left !important; }
   .text-xxl-right {
