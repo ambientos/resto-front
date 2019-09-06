@@ -1,13 +1,15 @@
 @import "variables";
 @import "mixins";
-@import "general";
 
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 
+@import "general";
+
 @import "blocks/header";
 @import "blocks/ico";
 @import "blocks/breadcrumbs";
+@import "blocks/widget";
 @import "blocks/promo";
 @import "blocks/list";

@@ -17,6 +17,11 @@
 		}
 	}
 
+
+	//
+	// Icons with red hover
+	//
+
 	&-primary {
 		@include transition;
 
@@ -28,6 +33,11 @@
 			fill: $red;
 		}
 	}
+
+
+	//
+	// Top icons
+	//
 
 	&[class*="_top-"] {
 		&::before {
@@ -45,6 +55,35 @@
 			}
 		}
 	}
+
+
+	//
+	// List icons
+	//
+
+	&[class*="_list-"] {
+		&::after {
+			$size: 90px;
+
+			flex: 0 0 $size;
+			max-width: $size;
+			height: $size;
+			background: {
+				repeat: no-repeat;
+				position: 50% 50%;
+				size: contain;
+			}
+		}
+	}
+
+	@each $ico in $list-icons {
+		&._list-#{$ico} {
+			&::after {
+				background-image: url('#{$img-dir}list-#{$ico}.svg');
+			}
+		}
+	}
+
 
 	&._search {
 		$size: 15px;

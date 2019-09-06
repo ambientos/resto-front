@@ -2,10 +2,11 @@ mixin list-ico(list)
 	.list-ico.d-md-flex.flex-md-wrap
 		- var n = 0
 		each itemList in list
-			div(class='list-ico-item _list-'+ itemList.type +' ico')
-				if ( itemList.title )
-					h3.list-ico-item-title!= itemList.title
+			div(class='list-ico-item _list-'+ itemList.type +' ico d-flex')
+				.list-ico-item-content
+					if ( itemList.title )
+						h3.list-ico-item-title!= itemList.title
 
-				if ( itemList.text )
-					.list-ico-item-text
-						p= itemList.text
+					if ( itemList.text )
+						.list-ico-item-text
+							p= itemList.text

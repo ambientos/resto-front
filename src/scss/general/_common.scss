@@ -12,3 +12,13 @@
 	overflow: hidden;
 	word-wrap: normal !important;
 }
+
+.container-inner {
+	@include media-breakpoint-up("xxl") {
+		max-width: 1210px;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+	}
+}

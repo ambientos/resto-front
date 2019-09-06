@@ -11,6 +11,12 @@
   overflow: hidden;
   word-wrap: normal !important; }
 
+@media (min-width: 1440px) {
+  .container-inner {
+    max-width: 1210px;
+    margin-left: auto;
+    margin-right: auto; } }
+
 @font-face {
   font-family: "OpenSans";
   font-weight: 400;
@@ -186,6 +192,31 @@
     background-image: url("../i/top-vb.svg"); }
   .ico._top-sk::before {
     background-image: url("../i/top-sk.svg"); }
+  .ico[class*="_list-"]::after {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 90px;
+            flex: 0 0 90px;
+    max-width: 90px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain; }
+  .ico._list-barcode::after {
+    background-image: url("../i/list-barcode.svg"); }
+  .ico._list-chat::after {
+    background-image: url("../i/list-chat.svg"); }
+  .ico._list-int::after {
+    background-image: url("../i/list-int.svg"); }
+  .ico._list-ok::after {
+    background-image: url("../i/list-ok.svg"); }
+  .ico._list-pc::after {
+    background-image: url("../i/list-pc.svg"); }
+  .ico._list-truck::after {
+    background-image: url("../i/list-truck.svg"); }
+  .ico._list-work::after {
+    background-image: url("../i/list-work.svg"); }
+  .ico._list-workflow::after {
+    background-image: url("../i/list-workflow.svg"); }
   .ico._search {
     width: 15px;
     height: 15px; }
@@ -206,6 +237,9 @@
     vertical-align: top; }
   .breadcrumbs a {
     color: inherit; }
+
+.widget {
+  margin: 3em 0; }
 
 .promo-container {
   min-height: 710px;
@@ -233,16 +267,54 @@
 .promo-more {
   margin-top: 2em; }
 
-@media (min-width: 768px) {
+.list-ico {
+  counter-reset: list-ico; }
   .list-ico-item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-            flex: 0 0 50%;
-    max-width: 50%;
-    border-width: 2px;
-    border-color: #e9ecef;
-    border-top-style: solid; }
-    .list-ico-item:nth-child(odd) {
-      border-right-style: solid; } }
+    padding-left: 18px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px; }
+    @media (min-width: 768px) {
+      .list-ico-item {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+        max-width: 50%;
+        border-width: 2px;
+        border-color: #e9ecef;
+        border-top-style: solid; }
+        .list-ico-item:nth-child(odd) {
+          border-right-style: solid; } }
+    .list-ico-item::before, .list-ico-item::after {
+      margin-right: 2rem; }
+    .list-ico-item::before {
+      display: block;
+      -webkit-box-flex: 0;
+          -ms-flex: 0 0 57px;
+              flex: 0 0 57px;
+      max-width: 57px;
+      height: 57px;
+      font-size: 1.9375rem;
+      font-weight: 800;
+      line-height: 1.5;
+      text-align: center;
+      color: #d03239;
+      border-width: 3px;
+      border-style: solid;
+      border-color: #d03239;
+      border-radius: 50%;
+      counter-increment: list-ico;
+      content: counter(list-ico); }
+    .list-ico-item::after {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+      content: ''; }
+    .list-ico-item-content {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; }
+    .list-ico-item-title {
+      color: #d03239; }
 
 /*# sourceMappingURL=site.css.map */

@@ -1,6 +1,15 @@
 .list {
 	&-ico {
+		counter-reset: list-ico;
+
 		&-item {
+			padding: {
+				left: $grid-gutter-width * .6;
+				top: $grid-gutter-width;
+				right: $grid-gutter-width;
+				bottom: $grid-gutter-width;
+			}
+
 			@include media-breakpoint-up("md") {
 				$width: 50%;
 
@@ -15,6 +24,49 @@
 				&:nth-child(odd) {
 					border-right-style: solid;
 				}
+			}
+
+			&::before,
+			&::after {
+				margin-right: 2rem;
+			}
+
+			&::before {
+				$size: $grid-gutter-width * 1.9;
+				$color: $red;
+
+				display: block;
+				flex: 0 0 $size;
+				max-width: $size;
+				height: $size;
+				font: {
+					size: 1.9375rem;
+					weight: $font-weight-extra-bold;
+				}
+				line-height: 1.5;
+				text-align: center;
+				color: $primary;
+				border: {
+					width: 3px;
+					style: solid;
+					color: $color;
+					radius: 50%;
+				}
+				counter-increment: list-ico;
+				content: counter(list-ico);
+			}
+
+			&::after {
+				order: 1;
+				content: '';
+			}
+
+			&-content {
+				order: 2;
+			}
+
+			&-title {
+				color: $primary;
 			}
 		}
 	}
