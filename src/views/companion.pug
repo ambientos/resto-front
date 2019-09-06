@@ -11,7 +11,7 @@ block content
 			.row
 				.col-md-6
 					h2.widget-title Типовые работы по ремонту и настройке компьютеров
-					+services-table({'checkboxes': false, 'tfoot': false}, [{'type': 'Диагностика ПК', 'price': 'бесплатно'}, {'type': 'Установка/переустановка Windows + установка драйверов (Установка антивируса в подарок)', 'price': '3500 руб.'}, {'type': 'Установка MS Office', 'price': '1000 руб.'}, {'type': 'Установка 1С', 'price': '3500 руб.'}, {'type': 'Установка любых других программ', 'price': 'от 200 руб.'}, {'type': 'Замена, апгрейд комплектующих', 'price': 'от 500 руб.'}, {'type': 'Подключение переферийного оборудования ', 'price': 'от 500 руб.'}])
+					+services-table({'checkboxes': false, 'tfoot': false}, [{'type': 'Диагностика ПК', 'price': 'бесплатно'}, {'type': 'Установка/переустановка Windows + установка драйверов (Установка антивируса в подарок)', 'price': '3500 руб.'}, {'type': 'Установка MS Office', 'price': '1000 руб.'}, {'type': 'Установка 1С', 'price': '3500&nbsp;руб.'}, {'type': 'Установка любых других программ', 'price': 'от&nbsp;200&nbsp;руб.'}, {'type': 'Замена, апгрейд комплектующих', 'price': 'от&nbsp;500&nbsp;руб.'}, {'type': 'Подключение переферийного оборудования ', 'price': 'от&nbsp;500&nbsp;руб.'}])
 				.col-md-6
 					h2.widget-title Установка и настройка сетевого оборудования
 					+services-table({'checkboxes': false, 'tfoot': false}, [{'type': 'Настройка роутера, wi-fi маршрутизатора', 'price': '1500 руб.'}, {'type': 'Настройка роутера Microtik, установка точки доступа', 'price': 'от 2000 руб.'}, {'type': 'Установка свитча', 'price': '500 руб.'}])
@@ -24,22 +24,4 @@ block content
 
 	.widget._dark._important
 		.container-inner.container
-			.callback-form
-				form
-					h2.callback-form-title Остались вопросы?
-					p.callback-form-info Мы с удовольствием проконсультируем вас персонально по телефону или через электронную почту
-					.callback-form-control-group.form-group
-						input.form-control(type='text', placeholder='Имя')
-					.callback-form-control-group.form-group
-						input.form-control(type='email', placeholder='E-mail')
-					.callback-form-control-group.form-group
-						input.form-control(type='tel', placeholder='Телефон')
-					.callback-form-control-group.form-group
-						input.form-control(type='text', placeholder='Комментарий')
-					.form-group
-						.form-note
-							| Отправляя свои данные через эту форму, вы соглашаетесь с 
-							a(href='/') политикой обработки персональных данных
-					.form-group
-						.form-submit
-							input.btn-secondary.btn(type='submit', value='Свяжитесь со мной')
+			include ./blocks/main/_callback-form.pug

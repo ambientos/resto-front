@@ -17,7 +17,7 @@ mixin services-table(options, serviceList)
 							else
 								span= service.type
 
-						td= service.price
+						td!= service.price
 			if options.tfoot
 				tfoot
 					tr

@@ -65,22 +65,4 @@ block content
 
 	.widget._dark._important
 		.container-inner.container
-			.callback-form
-				form
-					h2.callback-form-title Остались вопросы?
-					p.callback-form-info Мы с удовольствием проконсультируем вас персонально по телефону или через электронную почту
-					.callback-form-control-group.form-group
-						input.form-control(type='text', placeholder='Имя')
-					.callback-form-control-group.form-group
-						input.form-control(type='email', placeholder='E-mail')
-					.callback-form-control-group.form-group
-						input.form-control(type='tel', placeholder='Телефон')
-					.callback-form-control-group.form-group
-						input.form-control(type='text', placeholder='Комментарий')
-					.form-group
-						.form-note
-							| Отправляя свои данные через эту форму, вы соглашаетесь с 
-							a(href='/') политикой обработки персональных данных
-					.form-group
-						.form-submit
-							input.btn-secondary.btn(type='submit', value='Свяжитесь со мной')
+			include ./blocks/main/_callback-form.pug
