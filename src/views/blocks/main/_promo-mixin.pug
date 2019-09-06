@@ -14,13 +14,13 @@ mixin promo(object)
 							meta(property='position', content='2')
 
 				.promo-content
-					if ( object.title )
+					if object.title
 						h1.promo-title!= object.title
 
-					if ( object.text )
+					if object.text
 						.promo-text
 							p!= object.text
 
-					if ( object.button )
+					if object.button
 						.promo-more
 							span.btn-primary.btn= object.button

@@ -3,9 +3,9 @@ mixin list-ico(list)
 		each itemList in list
 			div(class='list-ico-item _list-'+ itemList.type +' ico d-flex')
 				.list-ico-item-content
-					if ( itemList.title )
+					if itemList.title
 						h3.list-ico-item-title!= itemList.title
 
-					if ( itemList.text )
+					if itemList.text
 						.list-ico-item-text
 							p= itemList.text
