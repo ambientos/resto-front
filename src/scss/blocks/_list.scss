@@ -11,19 +11,13 @@
 			}
 
 			@include media-breakpoint-up("md") {
-				$width: 50%;
+				@include flex-width(50%);
 
-				flex: 0 0 $width;
-				max-width: $width;
 				border: {
 					width: 2px;
 					color: $gray-200;
 					top-style: solid;
 				}
-
-				//&:nth-child(odd) {
-				//	border-right-style: solid;
-				//}
 			}
 
 			&::before,
@@ -36,8 +30,9 @@
 				$color: $red;
 
 				display: block;
-				flex: 0 0 $size;
-				max-width: $size;
+
+				@include flex-width($size);
+
 				height: $size;
 				font: {
 					size: 1.9375rem;

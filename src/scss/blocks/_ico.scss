@@ -65,8 +65,8 @@
 		&::after {
 			$size: 70px;
 
-			flex: 0 0 $size;
-			max-width: $size;
+			@include flex-width($size);
+
 			height: $size;
 			background: {
 				repeat: no-repeat;
@@ -83,7 +83,6 @@
 			}
 		}
 	}
-
 
 	&._search {
 		$size: 15px;

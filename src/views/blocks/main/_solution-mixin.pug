@@ -1,0 +1,20 @@
+mixin solution(object)
+	div(class='solutions-item _'+ object.type)
+		.solutions-item-row
+			.row.align-items-center
+				.solutions-item-title.col!= object.title
+				.solutions-item-more.col
+					a.btn-secondary.btn(href='/') Подробнее
+				.solutions-item-price-c._first.col
+					span.solutions-item-price= object.price1.v
+					span.solutions-item-price-l= object.price1.l
+				.solutions-item-price-c._second.col
+					span.solutions-item-price= object.price2.v
+					span.solutions-item-price-l= object.price2.l
+		.solutions-item-row
+			.row
+				.solutions-item-descr._first.col
+					p
+						b!= object.descr
+				.solutions-item-descr._second.col!= object.equip
+				.solutions-item-descr._third.col!= object.serv

@@ -32,6 +32,18 @@
 	}
 
 	&-title {
+		&._big {
+			font: {
+				family: $font-sub;
+				size: 2.75rem;
+			}
+			color: $primary;
+			text: {
+				align: center;
+				transform: uppercase;
+			}
+		}
+
 		&._important {
 			padding-bottom: 1em;
 			border-bottom: 2px solid $gray-200;
