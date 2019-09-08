@@ -37,12 +37,19 @@
 	}
 
 	&-title {
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&._primary {
+			color: $primary;
+		}
+
 		&._big {
 			font: {
 				family: $font-sub;
 				size: 2.75rem;
 			}
-			color: $primary;
 			text: {
 				align: center;
 				transform: uppercase;

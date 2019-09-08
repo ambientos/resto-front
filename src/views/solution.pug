@@ -31,14 +31,16 @@ block content
 				form
 					h2.callback-form-title Заказать интеграцию
 					p.callback-form-info Мы с удовольствием проконсультируем вас персонально по телефону или через электронную почту
-					.callback-form-control-group.form-group
-						input.form-control(type='tel', placeholder='Введите контактный телефон')
-					.callback-form-control-group.form-group
-						input.form-control(type='email', placeholder='Введите контактный e-mail')
-					.callback-form-control-group.form-group
-						input.form-control(type='text', placeholder='Комментарий и пожелания')
-					.callback-form-control-group.form-group
-						input(type='file')
+					.row.justify-content-center
+						.col-lg-6.col-md-8
+							.form-group
+								input.form-control(type='tel', placeholder='Введите контактный телефон')
+							.form-group
+								input.form-control(type='email', placeholder='Введите контактный e-mail')
+							.form-group
+								input.form-control(type='text', placeholder='Комментарий и пожелания')
+							.form-group
+								input(type='file')
 					.form-group
 						.form-submit
 							input.btn-secondary.btn-wide.btn(type='submit', value='Отправить')

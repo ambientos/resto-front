@@ -168,7 +168,7 @@
 .ico {
   display: inline-block;
   vertical-align: middle; }
-  .ico:first-child:not(div) {
+  .ico:first-child:not(div):not(svg) {
     margin-right: .5em; }
   .ico::before {
     display: inline-block;
@@ -246,6 +246,16 @@
     height: 45px; }
     .ico[class*='_link']:first-child {
       margin-right: 1em; }
+  .ico._social {
+    width: 36px;
+    height: 36px; }
+    .ico._social-item {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #e9ecef; }
+      .ico._social-item:not(:last-child), .ico._social-item:first-child {
+        margin-right: 1em; }
   .ico._search {
     width: 15px;
     height: 15px; }
@@ -293,10 +303,13 @@
     background-color: #e9ecef; }
   .widget._important {
     background: #d03239; }
+  .widget-title:last-child {
+    margin-bottom: 0; }
+  .widget-title._primary {
+    color: #d03239; }
   .widget-title._big {
     font-family: "MullerNarrow";
     font-size: 2.75rem;
-    color: #d03239;
     text-align: center;
     text-transform: uppercase; }
   .widget-title._sub {
@@ -432,6 +445,24 @@
                 box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
         z-index: 1; }
 
+.list-filter {
+  margin-bottom: 0; }
+  .list-filter-label {
+    margin-right: .5em; }
+  .list-filter-label,
+  .list-filter li {
+    font-size: .875rem; }
+  .list-filter li {
+    margin: 0 .2em; }
+    .list-filter li.active {
+      font-weight: 700; }
+      .list-filter li.active a {
+        color: inherit;
+        background-color: #fff; }
+  .list-filter a {
+    display: block;
+    padding: .3em .9em; }
+
 .product-carousel, .product-list {
   margin-top: 3em; }
 
@@ -533,6 +564,24 @@
   .knowledge-video-item-title {
     display: block;
     line-height: 1.3; }
+
+.knowledge-article-list {
+  margin-top: 15px; }
+
+.knowledge-article-item {
+  margin: 15px 0; }
+  .knowledge-article-item-meta, .knowledge-article-item-excerpt {
+    color: #5a5a5a; }
+  .knowledge-article-item-title, .knowledge-article-item-excerpt {
+    display: block; }
+  .knowledge-article-item-title {
+    margin: .3em 0;
+    font-size: 1.0625rem;
+    font-weight: 700; }
+  .knowledge-article-item-meta {
+    font-size: .875rem; }
+  .knowledge-article-item-excerpt {
+    margin-top: .8em; }
 
 .calc-form {
   position: relative;

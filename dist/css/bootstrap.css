@@ -360,7 +360,8 @@ mark,
   height: auto; }
 
 .img-block {
-  display: block; }
+  display: block;
+  width: 100%; }
 
 .img-rounded {
   border-radius: 1rem; }

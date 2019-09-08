@@ -26,4 +26,40 @@
 			}
 		}
 	}
+
+	&-article {
+		&-list {
+			margin-top: $grid-gutter-width * .5;
+		}
+
+		&-item {
+			margin: $grid-gutter-width * .5 0;
+
+			&-meta,
+			&-excerpt {
+				color: $body-color;
+			}
+
+			&-title,
+			&-excerpt {
+				display: block;
+			}
+
+			&-title {
+				margin: .3em 0;
+				font: {
+					size: 1.0625rem;
+					weight: $font-weight-bold;
+				}
+			}
+
+			&-meta {
+				font-size: .875rem;
+			}
+
+			&-excerpt {
+				margin-top: .8em;
+			}
+		}
+	}
 }

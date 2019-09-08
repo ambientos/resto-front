@@ -2,7 +2,7 @@
 	display: inline-block;
 	vertical-align: middle;
 
-	&:first-child:not(div) {
+	&:first-child:not(div):not(svg) {
 		margin-right: .5em;
 	}
 
@@ -101,6 +101,30 @@
 
 		&:first-child {
 			margin-right: 1em;
+		}
+	}
+
+
+	//
+	// Social links
+	//
+
+	&._social {
+		$size: $grid-gutter-width * 2;
+
+		width: $size * .6;
+		height: $size * .6;
+
+		&-item {
+			width: $size;
+			height: $size;
+			border-radius: 50%;
+			background-color: $gray-200;
+
+			&:not(:last-child),
+			&:first-child {
+				margin-right: 1em;
+			}
 		}
 	}
 

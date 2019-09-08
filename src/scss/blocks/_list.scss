@@ -134,4 +134,35 @@
 			}
 		}
 	}
+
+	&-filter {
+		margin-bottom: 0;
+
+		&-label {
+			margin-right: .5em;
+		}
+
+		&-label,
+		li {
+			font-size: .875rem;
+		}
+
+		li {
+			margin: 0 .2em;
+
+			&.active {
+				font-weight: $font-weight-bold;
+
+				a {
+					color: inherit;
+					background-color: $white;
+				}
+			}
+		}
+
+		a {
+			display: block;
+			padding: .3em .9em;
+		}
+	}
 }
