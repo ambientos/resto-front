@@ -8,4 +8,22 @@
 		}
 		color: $primary;
 	}
+
+	&-video {
+		&-item {
+			margin-bottom: $grid-gutter-width;
+
+			&-thumb {
+				img {
+					border: 5px solid $white;
+					box-shadow: 0 5px 5px 0 rgba($black, .07);
+				}
+			}
+
+			&-title {
+				display: block;
+				line-height: 1.3;
+			}
+		}
+	}
 }

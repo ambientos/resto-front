@@ -359,6 +359,9 @@ mark,
   max-width: 100%;
   height: auto; }
 
+.img-block {
+  display: block; }
+
 .img-rounded {
   border-radius: 1rem; }
 

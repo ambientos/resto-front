@@ -22,6 +22,10 @@
   @include img-fluid;
 }
 
+.img-block {
+  display: block;
+}
+
 .img-rounded {
   border-radius: 1rem;
 }

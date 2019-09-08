@@ -41,15 +41,15 @@ block content
 
 		.widget
 			h2.widget-title._sub.d-sm-flex.align-items-md-center.justify-content-sm-between
-				span Видеоуроки iiko
+				span.ico._video-title Видеоуроки iiko
 				a.btn-secondary.btn-sm.btn(href='/') Все уроки
-			.knowledge-list.row
+			.knowledge-video.row
 				- var videoList = ['Основы работы с BackOffice IIKO (основы + складской учет)', 'Основы работы с front iiko (Касса + официант)', 'Управление финансами', 'Выгрузка в 1С', 'Это полезно знать', 'Вебинары по дополнительным модулям iiko'];
 				each videoListItemTitle in videoList
-					a.knowledge-list-item.col-md-2(href='/')
-						figure.knowledget-list-item-thumb
-							img(
+					a.knowledge-video-item.col-md-2(href='/')
+						figure.knowledge-video-item-thumb
+							img.img-block(
 								src='t/58.jpg'
 								alt=''
 							)
-						span.knowledge-list-item-title!= videoListItemTitle
+						span.knowledge-video-item-title!= videoListItemTitle

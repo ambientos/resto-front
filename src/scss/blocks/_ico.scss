@@ -116,13 +116,25 @@
 		height: $size;
 	}
 
-	&._cart-mini {
+	&._cart-mini,
+	&._video-title {
 		&::before {
 			$size: 20px;
 
 			width: $size;
 			height: $size;
-			background-image: url('#{$img-dir}cart.svg');
 		}
+	}
+
+	&._cart-mini::before {
+		background-image: url('#{$img-dir}cart.svg');
+	}
+
+	&._video-title::before {
+		margin: {
+			top: .1em;
+			right: .5em;
+		}
+		background-image: url('#{$img-dir}video.svg');
 	}
 }
