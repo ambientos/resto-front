@@ -1,0 +1,11 @@
+.knowledge {
+	&-title {
+		margin-bottom: 0;
+		font: {
+			family: $font-sub;
+			size: 2.125rem;
+			weight: $font-weight-extra-bold;
+		}
+		color: $primary;
+	}
+}

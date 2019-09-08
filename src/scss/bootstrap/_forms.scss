@@ -363,3 +363,23 @@ textarea.form-control {
   margin-top: 2.5em;
   text-align: center;
 }
+
+
+//
+// Input with button
+//
+
+.form-input-with-button {
+  position: relative;
+  padding-right: 2rem;
+
+  .form-control {
+    padding-right: 150px;
+  }
+
+  .btn {
+    position: absolute;
+    top: -.2em;
+    right: 0;
+  }
+}

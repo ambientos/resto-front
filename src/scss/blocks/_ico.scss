@@ -23,13 +23,17 @@
 	//
 
 	&-primary {
-		@include transition;
+		&,
+		& * {
+			@include transition;
+		}
 
 		&._white {
 			fill: $white;
 		}
 
-		*:hover > & {
+		*:hover > &,
+		*:hover > & * {
 			fill: $red;
 		}
 	}
@@ -39,7 +43,7 @@
 	// Top icons
 	//
 
-	&[class*="_top-"] {
+	&[class*='_top-'] {
 		&::before {
 			$size: 30px;
 
@@ -61,7 +65,7 @@
 	// List icons
 	//
 
-	&[class*="_list-"] {
+	&[class*='_list-'] {
 		&::after {
 			$size: 70px;
 
@@ -86,7 +90,23 @@
 
 
 	//
-	// Other
+	// Links icons
+	//
+
+	&[class*='_link'] {
+		$size: $grid-gutter-width * 1.5;
+
+		width: $size;
+		height: $size;
+
+		&:first-child {
+			margin-right: 1em;
+		}
+	}
+
+
+	//
+	// Other icons
 	//
 
 	&._search {

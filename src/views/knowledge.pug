@@ -1,0 +1,55 @@
+extends ./layout/layout.pug
+
+block meta
+	title База знаний
+
+block content
+	include ./blocks/main/_knowledge-form.pug
+
+	.container-inner.container
+		.widget
+			h2.widget-title._sub Бесплатный учебник по iiko
+			ul.list-links.d-sm-flex.flex-wrap
+				li.list-links-item.d-flex
+					a.list-links-item-link.d-flex.align-items-center(href='/')
+						include ./blocks/main/i/notebook.svg
+						span iikoOffice
+				li.list-links-item.d-flex
+					a.list-links-item-link.d-flex.align-items-center(href='/')
+						include ./blocks/main/i/build.svg
+						span iikoFront
+				li.list-links-item.d-flex
+					a.list-links-item-link.d-flex.align-items-center(href='/')
+						include ./blocks/main/i/delivery.svg
+						span iikoDelivery
+				li.list-links-item.d-flex
+					a.list-links-item-link.d-flex.align-items-center(href='/')
+						include ./blocks/main/i/card.svg
+						span iicoCard
+				li.list-links-item.d-flex
+					a.list-links-item-link.d-flex.align-items-center(href='/')
+						include ./blocks/main/i/api.svg
+						span API
+				li.list-links-item.d-flex
+					a.list-links-item-link.d-flex.align-items-center(href='/')
+						include ./blocks/main/i/scheme.svg
+						span iicoChain
+				li.list-links-item.d-flex
+					a.list-links-item-link.d-flex.align-items-center(href='/')
+						include ./blocks/main/i/spec.svg
+						span Cпец. решения
+
+		.widget
+			h2.widget-title._sub.d-sm-flex.align-items-md-center.justify-content-sm-between
+				span Видеоуроки iiko
+				a.btn-secondary.btn-sm.btn(href='/') Все уроки
+			.knowledge-list.row
+				- var videoList = ['Основы работы с BackOffice IIKO (основы + складской учет)', 'Основы работы с front iiko (Касса + официант)', 'Управление финансами', 'Выгрузка в 1С', 'Это полезно знать', 'Вебинары по дополнительным модулям iiko'];
+				each videoListItemTitle in videoList
+					a.knowledge-list-item.col-md-2(href='/')
+						figure.knowledget-list-item-thumb
+							img(
+								src='t/58.jpg'
+								alt=''
+							)
+						span.knowledge-list-item-title!= videoListItemTitle

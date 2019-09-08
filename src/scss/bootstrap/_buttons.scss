@@ -50,6 +50,19 @@
   }
 }
 
+//
+// Wide button
+//
+
+.btn-wide {
+  $padding-x: $grid-gutter-width * 1.5;
+
+  padding: {
+    left: $padding-x;
+    right: $padding-x;
+  }
+}
+
 // Future-proof disabling of clicks on `<a>` elements
 a.btn.disabled,
 fieldset:disabled a.btn {

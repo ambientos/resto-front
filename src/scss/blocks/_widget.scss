@@ -27,6 +27,11 @@
 		}
 	}
 
+	&._gray {
+		padding: 2.5em 0;
+		background-color: $gray-200;
+	}
+
 	&._important {
 		background: $primary;
 	}
@@ -42,6 +47,10 @@
 				align: center;
 				transform: uppercase;
 			}
+		}
+
+		&._sub {
+			font-size: 1.375rem;
 		}
 
 		&._important {
