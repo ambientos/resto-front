@@ -296,7 +296,7 @@
     color: #fff;
     background-color: #212529; }
     .widget._dark .widget-title {
-      margin-bottom: 1.5em;
+      margin-bottom: 1em;
       color: inherit; }
   .widget._gray {
     padding: 2.5em 0;
@@ -746,26 +746,6 @@
   .solutions-item-descr ol {
     margin-top: .5em;
     padding-left: 1.1em; }
-
-.callback-form {
-  text-align: center; }
-  .callback-form-title {
-    margin-bottom: .1em;
-    font-family: "MullerNarrow";
-    font-size: 2.75rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: inherit;
-    text-align: center; }
-  .callback-form-info {
-    margin-bottom: 1em;
-    font-family: "MullerNarrow";
-    font-size: 1.625rem;
-    font-weight: 300; }
-  .callback-form-control-group {
-    max-width: 570px;
-    margin-left: auto;
-    margin-right: auto; }
 
 .procs::before {
   display: block;

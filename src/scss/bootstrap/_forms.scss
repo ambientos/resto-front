@@ -356,6 +356,20 @@ textarea.form-control {
 
 
 //
+// Info
+//
+
+.form-info {
+  margin-bottom: 1em;
+  font: {
+    family: $font-sub;
+    size: 1.625rem;
+    weight: $font-weight-light;
+  }
+}
+
+
+//
 // Submit
 //
 
