@@ -360,6 +360,28 @@
     .list-ico-item-title {
       color: #d03239; }
 
+.list-verify li {
+  position: relative;
+  padding-left: 39px; }
+  .list-verify li:not(:last-child) {
+    margin-bottom: 1.5em; }
+  .list-verify li::before {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -.2em;
+    width: 27px;
+    height: 27px;
+    content: '';
+    border-width: 2px;
+    border-style: solid;
+    border-color: #d03239;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 70% auto;
+    background-image: url("../i/verify.svg"); }
+
 .product-carousel, .product-list {
   margin-top: 3em; }
 

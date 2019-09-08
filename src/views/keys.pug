@@ -1,0 +1,31 @@
+extends ./layout/layout.pug
+
+block meta
+	title Ключи ЕГАИС и ЭЦП
+
+block content
+	+promo({ bg: '57.jpg', title: 'Ключи ЕГАИС и ЭЦП', text: 'Вам необходимо за короткий срок изготовить ключ ЕГАИС или ЭЦП?  Быстро, минимум бумажной волокиты, доставим к вам в офис в течении дня', button: 'Оставить заявку' })
+
+	.container-inner.container
+		.widget
+			h2.widget-title 1. Выберите услугу
+			+services-table([{'type': 'Выпуск сертификата ЭЦП', 'price': '3000 руб.'}, {'type': 'Выпуск сертификата ЕГАИС и запись на РУТОКЕН', 'price': '4500 руб.'}, {'type': 'Продление сертификата ЕГАИС РУТОКЕН', 'price': '3000 руб.'}, {'type': 'Выпуск сертификата ЕГАИС и запись на Джа карту', 'price': '4700 руб.'}, {'type': 'Продление сертификата ЕГАИС и запись на джа карту', 'price': '3500 руб.'}, {'type': 'Снятие с учета ККТ', 'price': '3000 руб.'}], {'checkboxes': true, 'tfoot': true})
+
+		.widget
+			h2.widget-title._important 2. Прикрепите документы по списку
+			.row
+				.col-md-6
+					ul.list-verify.list-unstyled
+						each item in ['Скан ИНН', 'Скан ОГРН', 'Скан паспорта ген. директора двух страниц', 'Скан снилса ген. директора или индивидуального предпринимателя', 'Учетная карточка в электронном виде (не скан)']
+							li= item
+
+				.col-md-6
+					form
+						.form-group
+							input.form-control-file(type='file', multiple)
+						.form-group.text-right
+							input.btn-primary.btn-sm.btn(type='submit', value='Отправить документы')
+
+	.widget._dark._important
+		.container-inner.container
+			include ./blocks/main/_callback-form.pug

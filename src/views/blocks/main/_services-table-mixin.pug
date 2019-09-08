@@ -1,4 +1,4 @@
-mixin services-table(options, serviceList)
+mixin services-table(serviceList, options)
 	.table-responsive-sm
 		table.table.table-bordered
 			thead
@@ -9,7 +9,7 @@ mixin services-table(options, serviceList)
 				each service in serviceList
 					tr
 						td
-							if options.checkboxes
+							if options && options.checkboxes
 								span.form-check
 									label.form-check-label
 										input.form-check-input(type='checkbox', value='')
@@ -18,12 +18,13 @@ mixin services-table(options, serviceList)
 								span= service.type
 
 						td!= service.price
-			if options.tfoot
+			if options && options.tfoot
 				tfoot
 					tr
 						td(colspan='2')
 							.row.align-items-sm-center
 								.col-md-6
 									b Выбрано 2 услуги
-								.col-md-6.text-right
-									span.btn-primary.btn-sm.btn Оставить заявку
+								if options.order
+									.col-md-6.text-right
+										span.btn-primary.btn-sm.btn Оставить заявку
