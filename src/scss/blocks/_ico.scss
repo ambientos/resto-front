@@ -2,7 +2,7 @@
 	display: inline-block;
 	vertical-align: middle;
 
-	&:first-child:not(div):not(svg) {
+	&:first-child:not(div):not(:last-child) {
 		margin-right: .5em;
 	}
 

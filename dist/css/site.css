@@ -168,7 +168,7 @@
 .ico {
   display: inline-block;
   vertical-align: middle; }
-  .ico:first-child:not(div):not(svg) {
+  .ico:first-child:not(div):not(:last-child) {
     margin-right: .5em; }
   .ico::before {
     display: inline-block;
