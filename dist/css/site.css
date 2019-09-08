@@ -360,6 +360,91 @@
     .list-ico-item-title {
       color: #d03239; }
 
+.product-carousel, .product-list {
+  margin-top: 3em; }
+
+.product-carousel .owl-item.active {
+  margin-right: -1px; }
+
+.product-carousel .owl-item:hover {
+  z-index: 1; }
+
+.product-item {
+  position: relative;
+  padding: 45px 30px 30px;
+  border: 1px solid #e9ecef;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  @media (prefers-reduced-motion: reduce) {
+    .product-item {
+      -webkit-transition: none;
+      transition: none; } }
+  .product-item:hover {
+    border-color: #ced4da; }
+    .product-item:hover ._stock {
+      color: #1fc160; }
+      .product-item:hover ._stock .avail-ico {
+        fill: #1fc160; }
+    .product-item:hover ._order {
+      color: #ec8743; }
+      .product-item:hover ._order .avail-ico {
+        fill: #ec8743; }
+    .product-item:hover i {
+      visibility: visible;
+      opacity: 1; }
+  .product-item-avail {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    padding: .1em .3em;
+    border-radius: .2rem;
+    background: rgba(255, 255, 255, 0.5); }
+    .product-item-avail i {
+      margin-right: .5em;
+      font-style: normal;
+      visibility: hidden;
+      opacity: 0;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out; }
+      @media (prefers-reduced-motion: reduce) {
+        .product-item-avail i {
+          -webkit-transition: none;
+          transition: none; } }
+    .product-item-avail svg {
+      width: 20px;
+      height: 18px; }
+      .product-item-avail svg .avail-ico {
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+        @media (prefers-reduced-motion: reduce) {
+          .product-item-avail svg .avail-ico {
+            -webkit-transition: none;
+            transition: none; } }
+  .product-item-thumb {
+    margin-bottom: 1em; }
+  .product-item-title {
+    min-height: 3em;
+    margin-bottom: .5em;
+    font-size: .875rem;
+    text-align: center;
+    overflow: hidden; }
+  .product-item-price {
+    margin-right: 1.5em;
+    font-family: "MullerNarrow";
+    font-size: 1.1875rem;
+    font-weight: 800;
+    line-height: 1.2; }
+  .product-item-more {
+    font-size: .875rem;
+    font-weight: 700;
+    text-transform: uppercase; }
+    .product-item-more a {
+      color: inherit;
+      border-bottom-width: 1px;
+      border-bottom-style: dotted; }
+      .product-item-more a:hover {
+        color: #d03239; }
+
 .calc-form {
   position: relative;
   padding: 39px 39px 0;

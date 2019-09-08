@@ -52,10 +52,10 @@
 		-webkit-tap-highlight-color: transparent;
 		-webkit-touch-callout: none;
 	}
-	.owl-item img {
-		display: block;
-		width: 100%;
-	}
+	//.owl-item img {
+	//	display: block;
+	//	width: 100%;
+	//}
 
 	.owl-nav.disabled,
 	.owl-dots.disabled {
@@ -119,6 +119,34 @@
 
 	&.owl-rtl .owl-item {
 		float: right;
+	}
+
+	.owl-nav {
+		$margin-x: 30px;
+
+		position: absolute;
+		left: -$margin-x;
+		top: 8em;
+		right: -$margin-x;
+
+		button {
+			position: absolute;
+			top: 0;
+
+			&.owl-prev,
+			&.owl-next {
+				font-size: 350%;
+				line-height: 1;
+			}
+
+			&.owl-prev {
+				left: 0;
+			}
+
+			&.owl-next {
+				right: 0;
+			}
+		}
 	}
 }
 

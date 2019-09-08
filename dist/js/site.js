@@ -1,5 +1,37 @@
 (function($){
 	/**
+	 * Owl Carousel
+	 */
+
+	$('.carousel-container').each(function(){
+		var container = $(this),
+			carousel = container.find('.carousel')
+
+		carousel.owlCarousel({
+			items: 1,
+			margin: 0,
+			loop: true,
+			nav: true,
+			dots: false,
+			responsive: {
+				0: {
+					items: 1
+				},
+				768: {
+					items: 2
+				},
+				992: {
+					items: 3
+				},
+				1200: {
+					items: 4
+				}
+			}
+		})
+	})
+
+
+	/**
 	 * Custom checkboxes
 	 */
 

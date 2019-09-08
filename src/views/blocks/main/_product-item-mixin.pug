@@ -1,0 +1,22 @@
+mixin product-item(object)
+	.product-item
+		div(class='product-item-avail _' + (object.avail ? 'stock' : 'order'))
+			if object.avail
+				i В наличии
+				span.ico
+					include ./i/stock.svg
+			else
+				i Под заказ
+				span.ico
+					include ./i/order.svg
+
+		figure.product-item-thumb.d-flex.align-items-center.justify-content-center
+			img(
+				src='t/'+ object.thumb
+				alt=''
+			)
+		.product-item-title!= object.title
+		.product-item-meta.d-flex.justify-content-center
+			span.product-item-price= object.price
+			span.product-item-more
+				a(href='/') Подробнее

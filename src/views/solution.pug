@@ -51,3 +51,8 @@ block content
 		.widget
 			h2.widget-title._big Интересные модули для данного бизнеса
 			p Мы продаем систему iiko это комплексное решение по управлению предприятием для общепита. Система состоит из множества модулей. Данные модули будут расположены в магазине. Для каждого решения можно предлагать различные допы в виде модулей, надо на страничке разместить самые популярные. Пример того как это можно реализовать
+			.carousel-container
+				.product-carousel.carousel.owl-carousel
+					- var productList = [{'avail': true, 'thumb': '31.jpg', 'title': 'Моноблок Sam4s SPT-7000', 'price': '48 300₽'}, {'thumb': '32.jpg', 'title': 'Моноблок Zonerich ZQ-T9150 (АТОЛ VIVA Light)', 'price': '37 000₽'}, {'avail': true, 'thumb': '33.jpg', 'title': 'Моноблок Zonerich ZQ-T9120 MINI (АТОЛ VIVA MINI)', 'price': '37 000₽'}, {'thumb': '34.jpg', 'title': 'Моноблок Sam4s SPT-7000', 'price': '48 300₽'}, {'thumb': '35.jpg', 'title': 'Моноблок Zonerich ZQ-T9150 (АТОЛ VIVA Light)', 'price': '37 000₽'}];
+					each productItem in productList
+						+product-item(productItem)
