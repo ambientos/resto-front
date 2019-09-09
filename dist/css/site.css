@@ -671,8 +671,10 @@
     border-style: dashed;
     border-color: #fff;
     border-radius: 1.5rem; }
-  .calc-form-submit .btn {
-    margin-bottom: -1.8em; }
+  .calc-form-submit {
+    text-align: center; }
+    .calc-form-submit .btn {
+      margin-bottom: -1.8em; }
 
 .calc-info {
   position: relative;
