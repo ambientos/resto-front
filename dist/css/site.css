@@ -463,6 +463,12 @@
     display: block;
     padding: .3em .9em; }
 
+.list-side-menu li {
+  margin: .5em 0;
+  font-weight: 700; }
+  .list-side-menu li.current-menu-item a {
+    color: #d03239; }
+
 .product-carousel, .product-list {
   margin-top: 3em; }
 

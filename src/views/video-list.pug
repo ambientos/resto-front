@@ -1,0 +1,35 @@
+extends ./layout/layout.pug
+
+block meta
+	title Все видео
+
+block content
+	+knowledge-form({'title': 'Все видео', 'placeholder': 'Поиск по видео'})
+
+	.container-inner.container
+		.widget
+			h2.widget-title._sub
+				span.ico._video-title Видеоуроки iiko
+			.row
+				.col-md-3
+					- var menuList = ['Все уроки', 'Уроки по iiko', 'Уроки по 1С', 'Модули'], n = 0;
+					ul.list-side-menu.list-unstyled
+						each menuListItem in menuList
+							- n++;
+							li(class=(1 === n ? 'current-menu-item' : undefined))
+								a(href='/')= menuListItem
+				.col-md-9
+					.knowledge-video.row
+						- var videoList = ['Основы работы с BackOffice IIKO (основы + складской учет)', 'Основы работы с front iiko (Касса + официант)', 'Управление финансами', 'Это полезно знать', 'Основы работы с front iiko (Касса + официант)', 'Управление финансами', 'Выгрузка в 1С', 'Вебинары по дополнительным модулям iiko'];
+						each videoListItemTitle in videoList
+							a.knowledge-video-item.col-md-3(href='/')
+								figure.knowledge-video-item-thumb
+									img.img-block.img-fluid(
+										src='t/58.jpg'
+										alt=''
+									)
+								span.knowledge-video-item-title!= videoListItemTitle
+
+	.widget._nomargin._dark._important
+		.container-inner.container
+			include ./blocks/main/_callback-form-inline.pug

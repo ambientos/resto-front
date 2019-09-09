@@ -165,4 +165,17 @@
 			padding: .3em .9em;
 		}
 	}
+
+	&-side-menu {
+		li {
+			margin: .5em 0;
+			font-weight: $font-weight-bold;
+
+			&.current-menu-item {
+				a {
+					color: $link-hover-color;
+				}
+			}
+		}
+	}
 }
