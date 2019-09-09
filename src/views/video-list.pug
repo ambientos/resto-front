@@ -4,6 +4,9 @@ block meta
 	title Все видео
 
 block content
+	.container-inner.container
+		+breadcrumbs({'items': ['Главная', 'База знаний', 'Все видео']})
+
 	+knowledge-form({'title': 'Все видео', 'placeholder': 'Поиск по видео'})
 
 	.container-inner.container
@@ -12,11 +15,10 @@ block content
 				span.ico._video-title Видеоуроки iiko
 			.row
 				.col-md-3
-					- var menuList = ['Все уроки', 'Уроки по iiko', 'Уроки по 1С', 'Модули'], n = 0;
+					- var menuList = ['Все уроки', 'Уроки по iiko', 'Уроки по 1С', 'Модули'];
 					ul.list-side-menu.list-unstyled
-						each menuListItem in menuList
-							- n++;
-							li(class=(1 === n ? 'current-menu-item' : undefined))
+						each menuListItem, index in menuList
+							li(class=(0 === index ? 'current-menu-item' : undefined))
 								a(href='/')= menuListItem
 				.col-md-9
 					.knowledge-video.row

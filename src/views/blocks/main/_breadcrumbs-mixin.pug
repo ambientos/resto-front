@@ -1,0 +1,10 @@
+mixin breadcrumbs(object)
+	- var type = object && object.type ? object.type : 'general';
+	div(class='breadcrumbs'+ ( 'promo' === type ? ' promo-breadcrumbs' : ''), typeof='BreadcrumbList', vocab='http://schema.org/')
+		each item, index in object.items
+			span(property='itemListElement', typeof='ListItem')
+				a(property='item', typeof='WebPage', href='/')
+					span(property='name')= item
+					meta(property='position', content=index +1)
+			if index +1 < object.items.length
+				span.delimiter »

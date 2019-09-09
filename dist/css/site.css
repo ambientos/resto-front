@@ -270,11 +270,11 @@
     background-image: url("../i/video.svg"); }
 
 .breadcrumbs {
-  margin-bottom: 2em;
+  margin: 2em 0;
   font-size: .75rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff; }
+  color: #adb5bd; }
   .breadcrumbs .delimiter {
     margin: 0 .9em 0 .7em;
     font-size: 90%;
@@ -320,10 +320,13 @@
 
 .promo-container {
   min-height: 710px;
-  padding: 24px 30px;
+  padding: 1px 30px 24px;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover; }
+
+.promo-breadcrumbs {
+  color: #fff; }
 
 .promo-content {
   max-width: 560px;

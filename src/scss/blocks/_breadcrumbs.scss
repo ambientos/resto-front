@@ -1,11 +1,11 @@
 .breadcrumbs {
-	margin-bottom: 2em;
+	margin: 2em 0;
 	font: {
 		size: .75rem;
 		weight: $font-weight-bold;
 	}
 	text-transform: uppercase;
-	color: $white;
+	color: $gray-500;
 
 	.delimiter {
 		margin: 0 .9em 0 .7em;
