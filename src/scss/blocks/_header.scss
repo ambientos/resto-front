@@ -19,7 +19,11 @@
 			}
 
 			svg {
-				width: 20px;
+				$size: 20px;
+
+				width: $size;
+				height: $size;
+				margin-top: .3em;
 			}
 		}
 	}
