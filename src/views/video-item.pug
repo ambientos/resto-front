@@ -1,0 +1,24 @@
+extends ./layout/layout.pug
+
+block meta
+	title Основы работы с BackOffice IIKO
+
+block content
+	.container-inner.container
+		+breadcrumbs({'items': ['Главная', 'База знаний', 'Все видео', 'Основы работы с IIKO']})
+
+		.widget
+			h2.widget-title._sub
+				span.ico._video-title Основы работы с BackOffice IIKO
+			.knowledge-video-item
+				figure.knowledge-video-item-thumb
+					img.img-block.img-fluid(
+						src='t/68.jpg'
+						alt=''
+					)
+			.knowledge-video-item-back
+				a(href='/').ico._back вернуться ко всем видео
+
+	.widget._nomargin._dark._important
+		.container-inner.container
+			include ./blocks/main/_callback-form-inline.pug
