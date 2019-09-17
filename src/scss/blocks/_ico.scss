@@ -45,7 +45,7 @@
 
 	&[class*='_top-'] {
 		&::before {
-			$size: 30px;
+			$size: 24px;
 
 			width: $size;
 			height: $size;
@@ -67,7 +67,7 @@
 
 	&[class*='_list-'] {
 		&::after {
-			$size: 70px;
+			$size: 56px;
 
 			@include flex-width($size);
 

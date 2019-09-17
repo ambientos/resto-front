@@ -70,8 +70,8 @@
   font-size: 1.5rem;
   font-weight: 800; }
   .header-phone-num svg {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
     margin-top: .3em; }
 
 .header-social-item:not(:last-child) {
@@ -194,8 +194,8 @@
   *:hover > .ico-primary * {
     fill: #d03239; }
   .ico[class*='_top-']::before {
-    width: 30px;
-    height: 30px; }
+    width: 24px;
+    height: 24px; }
   .ico._top-wa::before {
     background-image: url("../i/top-wa.svg"); }
   .ico._top-tg::before {
@@ -206,10 +206,10 @@
     background-image: url("../i/top-sk.svg"); }
   .ico[class*='_list-']::after {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 70px;
-            flex: 0 0 70px;
-    max-width: 70px;
-    height: 70px;
+        -ms-flex: 0 0 56px;
+            flex: 0 0 56px;
+    max-width: 56px;
+    height: 56px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain; }
@@ -337,7 +337,7 @@
   color: #fff; }
 
 .promo-content {
-  max-width: 560px;
+  max-width: 448px;
   padding: 60px;
   background-color: #fff; }
 
@@ -382,7 +382,7 @@
       height: 57px;
       font-size: 1.9375rem;
       font-weight: 800;
-      line-height: 1.5;
+      line-height: 2;
       text-align: center;
       color: #d03239;
       border-width: 3px;

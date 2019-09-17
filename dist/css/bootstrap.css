@@ -12,7 +12,7 @@
 
 html {
   font-family: sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -292,22 +292,22 @@ h1, h2, h3, h4, h5, h6,
   color: #26303b; }
 
 h1, .h1 {
-  font-size: 2.5rem; }
+  font-size: 2rem; }
 
 h2, .h2 {
-  font-size: 1.75rem; }
+  font-size: 1.4rem; }
 
 h3, .h3 {
-  font-size: 1.25rem; }
+  font-size: 1.25048rem; }
 
 h4, .h4 {
-  font-size: 1rem; }
+  font-size: 0.8rem; }
 
 h5, .h5 {
-  font-size: 1rem; }
+  font-size: 0.8rem; }
 
 h6, .h6 {
-  font-size: 1rem; }
+  font-size: 0.8rem; }
 
 small,
 .small {
@@ -338,7 +338,7 @@ mark,
 
 .blockquote {
   margin-bottom: 2rem;
-  font-size: 1.25rem; }
+  font-size: 1rem; }
 
 .blockquote-footer {
   display: block;
@@ -1695,14 +1695,14 @@ select.form-control:focus::-ms-value {
 .form-control-sm {
   height: calc(1.5em + 1.25rem + 2px);
   padding: 0.625rem 1.875rem;
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   line-height: 1.5;
   border-radius: 0.2rem; }
 
 .form-control-lg {
   height: calc(1.5em + 1rem + 2px);
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
@@ -1747,8 +1747,8 @@ textarea.form-control {
     .form-check-custom-control {
       display: inline-block;
       position: relative;
-      width: 21px;
-      height: 21px;
+      width: 16.8px;
+      height: 16.8px;
       margin-right: .5em;
       vertical-align: top;
       border-width: 1px;
@@ -1810,7 +1810,7 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   line-height: 1.5;
   color: #fff;
   background-color: rgba(31, 193, 96, 0.9);
@@ -1911,7 +1911,7 @@ textarea.form-control {
   max-width: 100%;
   padding: 0.25rem 0.5rem;
   margin-top: .1rem;
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   line-height: 1.5;
   color: #fff;
   background-color: rgba(208, 50, 57, 0.9);
@@ -2365,13 +2365,13 @@ fieldset:disabled a.btn {
 
 .btn-lg {
   padding: 0.5rem 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
   border-radius: 1.5rem; }
 
 .btn-sm {
   padding: 0.625rem 1.875rem;
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   line-height: 1.5;
   border-radius: 1.4rem; }
 
@@ -2538,7 +2538,7 @@ input[type="button"].btn-block {
 .navbar-toggler {
   margin: .4em 0;
   padding: 0.25rem 0.75rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1;
   background-color: transparent;
   border: 1px solid transparent;

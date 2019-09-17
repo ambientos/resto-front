@@ -278,7 +278,7 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              .8rem !default; // Assumes the browser default, typically `16px`
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .8125 !default;
 
@@ -294,7 +294,7 @@ $line-height-base:            1.5 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 1.75 !default;
-$h3-font-size:                $font-size-base * 1.25 !default;
+$h3-font-size:                $font-size-base * 1.5631 !default;
 $h4-font-size:                $font-size-base * 1 !default;
 $h5-font-size:                $font-size-base * 1 !default;
 $h6-font-size:                $font-size-base !default;
