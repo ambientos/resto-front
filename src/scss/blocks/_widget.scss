@@ -1,5 +1,5 @@
 .widget {
-	$margin-y: 5em;
+	$margin-y: 3em;
 
 	margin-top: $margin-y;
 	background: {
@@ -17,7 +17,7 @@
 	}
 
 	&._dark {
-		padding: 5em 0;
+		padding: $margin-y * 2 0;
 		color: $white;
 		background-color: $gray-900;
 
@@ -28,7 +28,7 @@
 	}
 
 	&._gray {
-		padding: 2.5em 0;
+		padding: $margin-y * .5 0;
 		background-color: $gray-200;
 	}
 
