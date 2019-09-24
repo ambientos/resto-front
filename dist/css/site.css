@@ -773,7 +773,7 @@
 .procs::before {
   display: block;
   position: relative;
-  top: 126.5px;
+  top: 101.2px;
   margin: 0 7%;
   content: '';
   border-top: 2px solid #d03239; }
@@ -788,7 +788,7 @@
         -ms-flex-positive: 1;
             flex-grow: 1;
     max-width: 100%;
-    padding: 110px 1em 0;
+    padding: 88px 1em 0;
     font-family: "MullerNarrow";
     font-weight: 800;
     text-align: center; }
@@ -796,8 +796,8 @@
       display: block;
       content: ''; }
     .procs-list-item::before {
-      width: 30px;
-      height: 30px;
+      width: 24px;
+      height: 24px;
       margin: auto;
       border-width: 7px;
       border-style: solid;
@@ -810,7 +810,7 @@
       top: 1em;
       right: 0;
       width: 80px;
-      height: 80px;
+      height: 58px;
       margin: auto;
       background-repeat: no-repeat;
       background-position: 50% 50%;
