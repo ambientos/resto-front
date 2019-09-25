@@ -29,10 +29,6 @@
 			@each $type, $color in ( 'stock': $green, 'order': $orange ) {
 				._#{$type} {
 					color: $color;
-
-					.avail-ico {
-						fill: $color;
-					}
 				}
 			}
 
@@ -49,6 +45,7 @@
 			top: $margin;
 			right: $margin;
 			padding: .1em .3em;
+			color: $gray-200;
 			border-radius: .2rem;
 			background: rgba($white, .5);
 
@@ -64,10 +61,6 @@
 			svg {
 				width: 20px;
 				height: 18px;
-
-				.avail-ico {
-					@include transition;
-				}
 			}
 		}
 

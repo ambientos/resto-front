@@ -154,7 +154,13 @@ img {
 
 svg {
   overflow: hidden;
-  vertical-align: middle; }
+  vertical-align: middle;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  @media (prefers-reduced-motion: reduce) {
+    svg {
+      -webkit-transition: none;
+      transition: none; } }
 
 table {
   border-collapse: collapse; }

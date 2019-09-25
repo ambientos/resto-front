@@ -112,6 +112,7 @@
 .header-nav {
   padding-top: 0;
   padding-bottom: 0;
+  color: #fff;
   background-color: #26303b; }
   .header-nav-list li {
     position: relative;
@@ -163,6 +164,10 @@
       padding-bottom: 0.7em; }
       .header-nav-list ul a:hover {
         background-color: #26303b; }
+  .header-nav .btn {
+    color: #fff; }
+    .header-nav .btn:hover {
+      color: #d03239; }
   .header-nav a {
     display: block;
     color: inherit; }
@@ -179,20 +184,6 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain; }
-  .ico-primary,
-  .ico-primary * {
-    -webkit-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    @media (prefers-reduced-motion: reduce) {
-      .ico-primary,
-      .ico-primary * {
-        -webkit-transition: none;
-        transition: none; } }
-  .ico-primary._white {
-    fill: #fff; }
-  *:hover > .ico-primary,
-  *:hover > .ico-primary * {
-    fill: #d03239; }
   .ico[class*='_top-']::before {
     width: 24px;
     height: 24px; }
@@ -505,12 +496,8 @@
     border-color: #ced4da; }
     .product-item:hover ._stock {
       color: #1fc160; }
-      .product-item:hover ._stock .avail-ico {
-        fill: #1fc160; }
     .product-item:hover ._order {
       color: #ec8743; }
-      .product-item:hover ._order .avail-ico {
-        fill: #ec8743; }
     .product-item:hover i {
       visibility: visible;
       opacity: 1; }
@@ -519,6 +506,7 @@
     top: 18px;
     right: 18px;
     padding: .1em .3em;
+    color: #e9ecef;
     border-radius: .2rem;
     background: rgba(255, 255, 255, 0.5); }
     .product-item-avail i {
@@ -535,13 +523,6 @@
     .product-item-avail svg {
       width: 20px;
       height: 18px; }
-      .product-item-avail svg .avail-ico {
-        -webkit-transition: all 0.2s ease-in-out;
-        transition: all 0.2s ease-in-out; }
-        @media (prefers-reduced-motion: reduce) {
-          .product-item-avail svg .avail-ico {
-            -webkit-transition: none;
-            transition: none; } }
   .product-item-thumb {
     margin-bottom: 1em; }
   .product-item-title {

@@ -269,6 +269,8 @@ svg {
   // See https://github.com/twbs/bootstrap/issues/26878
   overflow: hidden;
   vertical-align: middle;
+
+  @include transition;
 }
 
 

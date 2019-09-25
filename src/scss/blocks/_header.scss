@@ -91,6 +91,7 @@
 			top: 0;
 			bottom: 0;
 		}
+		color: #fff;
 		background-color: $bg-menu;
 
 		&-list {
@@ -172,6 +173,14 @@
 						background-color: $bg-menu;
 					}
 				}
+			}
+		}
+
+		.btn {
+			color: $white;
+
+			&:hover {
+				color: $primary;
 			}
 		}
 

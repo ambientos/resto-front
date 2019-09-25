@@ -19,27 +19,6 @@
 
 
 	//
-	// Icons with red hover
-	//
-
-	&-primary {
-		&,
-		& * {
-			@include transition;
-		}
-
-		&._white {
-			fill: $white;
-		}
-
-		*:hover > &,
-		*:hover > & * {
-			fill: $red;
-		}
-	}
-
-
-	//
 	// Top icons
 	//
 
