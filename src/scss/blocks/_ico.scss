@@ -19,6 +19,28 @@
 
 
 	//
+	// Button icons
+	//
+
+	&[class*='_btn-ico'] {
+		&::before {
+			$size: 20px;
+
+			width: $size;
+			height: $size;
+		}
+	}
+
+	@each $ico in $btn-icons {
+		&._btn-ico-#{$ico} {
+			&::before {
+				background-image: url('#{$img-dir}btn-#{$ico}.svg');
+			}
+		}
+	}
+
+
+	//
 	// Top icons
 	//
 

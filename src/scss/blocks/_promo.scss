@@ -21,12 +21,9 @@
 
 	&-title {
 		margin-bottom: .5em;
-		font: {
-			family: $font-sub;
-			size: 3.125rem;
-			weight: $font-weight-extra-bold;
-		}
+		font-size: 3.125rem;
 		line-height: 1.1;
+		color: $black;
 		text-transform: uppercase;
 	}
 

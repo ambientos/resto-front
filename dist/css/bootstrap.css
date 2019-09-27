@@ -298,7 +298,10 @@ h1, h2, h3, h4, h5, h6,
   color: #26303b; }
 
 h1, .h1 {
-  font-size: 2rem; }
+  font-family: "MullerNarrow";
+  font-weight: 800;
+  font-size: 2rem;
+  color: #d03239; }
 
 h2, .h2 {
   font-size: 1.4rem; }
