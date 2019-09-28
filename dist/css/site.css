@@ -239,6 +239,22 @@
     background-image: url("../i/list-fn.svg"); }
   .ico._list-ribbon::after {
     background-image: url("../i/list-ribbon.svg"); }
+  .ico[class*='_search-']::before {
+    height: 15px;
+    width: 15px;
+    margin-top: .1em;
+    margin-right: .3em;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain; }
+  .ico._search-post::before {
+    background-image: url("../i/search-post.svg"); }
+  .ico._search-product::before {
+    background-image: url("../i/search-product.svg"); }
+  .ico._search-video::before {
+    background-image: url("../i/search-video.svg"); }
+  .ico._search-lesson::before {
+    background-image: url("../i/search-lesson.svg"); }
   .ico[class*='_link'] {
     width: 45px;
     height: 45px; }
@@ -334,6 +350,12 @@
     margin-bottom: .5em; }
   .entry-container {
     overflow: hidden; }
+  .entry-title._sub {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #e9ecef; }
+    .entry-title._sub h1 {
+      margin-bottom: 0; }
   .entry-content img {
     max-width: 100%;
     height: auto; }
@@ -851,5 +873,13 @@
       margin: .5em 0 .8em;
       font-size: 1rem;
       color: #d03239; }
+
+.search-list-item {
+  margin-bottom: 1.5em;
+  padding-bottom: 1.8em;
+  border-bottom: 1px solid #e9ecef; }
+  .search-list-item-type {
+    margin-bottom: .5em;
+    color: #d03239; }
 
 /*# sourceMappingURL=site.css.map */

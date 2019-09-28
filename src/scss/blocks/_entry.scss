@@ -17,7 +17,16 @@
 		overflow: hidden;
 	}
 
-	&-header {
+	&-title {
+		&._sub {
+			margin-bottom: 1em;
+			padding-bottom: 1em;
+			border-bottom: 1px solid $gray-200;
+
+			h1 {
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	&-content {

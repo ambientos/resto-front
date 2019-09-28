@@ -1,0 +1,32 @@
+extends ./layout/layout.pug
+
+block meta
+	title Результаты поиска
+
+block content
+	.entry-container
+		.container
+			.entry
+				header.entry-header
+					.entry-title._sub.d-sm-flex.align-items-md-center.justify-content-sm-between
+						h1 Результаты поиска
+						span
+							| Найдено 
+							b 134
+							|  страницы
+
+				.search-list
+					- var searchList = [{'type': 'video', 'title': 'В силу принципа виртуальных скоростей'}, {'type': 'post', 'title': 'Эйлера даёт большую проекцию на оси, чем вибрирующий угол тангажа.'}, {'type': 'product', 'title': 'Будем, как и раньше, предполагать, что время набора максимальной скорости даёт более простую систему дифференциальных уравнений'}, {'type': 'post', 'title': 'Будем, как и раньше, предполагать, что кожух проецирует курс'}, {'type': 'post', 'title': 'Любое возмущение затухает, если тангаж перманентно'}, {'type': 'post', 'title': 'Если основание движется с постоянным ускорением'}, {'type': 'product', 'title': 'Однако исследование задачи в более строгой постановке показывает'}, {'type': 'lesson', 'title': 'Центр сил требует большего внимания'}, {'type': 'video', 'title': 'Вектор угловой скорости, как можно показать с помощью не совсем'}, {'type': 'video', 'title': 'Период горизонтально проецирует'}], searchTypes = { 'post': 'Статья', 'product': 'Товар', 'lesson': 'Урок', 'video': 'Видеоурок'};
+					each searchListItem in searchList
+						article.search-list-item
+							h2.search-list-item-title
+								a(href='/')= searchListItem.title
+							div(class='search-list-item-type ico _search-'+ searchListItem.type)= searchTypes[searchListItem.type]
+							.search-list-item-excerpt Модуль iikoKitchen предназначен для автоматизации работы заведующего производством или старшего повара на кухне предприятий общественного (в т.ч. быстрого) питания. Интерфейс модуля адаптирован для использования на терминалах с технологией Touch-screen и может использоваться без клавиатуры и мыши.
+
+				.d-sm-flex.justify-content-sm-between.align-items-sm-center
+					include ./blocks/main/_pagination.pug
+					span
+						| Найдено 
+						b 134
+						|  страницы

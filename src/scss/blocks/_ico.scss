@@ -91,6 +91,37 @@
 
 
 	//
+	// Search icons
+	//
+
+	&[class*='_search-'] {
+		&::before {
+			$size: 15px;
+
+			height: $size;
+			width: $size;
+			margin: {
+				top: .1em;
+				right: .3em;
+			}
+			background: {
+				repeat: no-repeat;
+				position: 50% 50%;
+				size: contain;
+			}
+		}
+	}
+
+	@each $ico in $search-icons {
+		&._search-#{$ico} {
+			&::before {
+				background-image: url('#{$img-dir}search-#{$ico}.svg');
+			}
+		}
+	}
+
+
+	//
 	// Links icons
 	//
 
