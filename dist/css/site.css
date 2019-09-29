@@ -17,11 +17,10 @@
 .text-right {
   text-align: right !important; }
 
-@media (min-width: 1440px) {
-  .container-inner {
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto; } }
+.container-inner {
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto; }
 
 @font-face {
   font-family: "OpenSans";
@@ -385,8 +384,8 @@
   min-height: 580px;
   padding: 1px 30px 24px;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover; }
+  background-position: 50% 0;
+  background-size: auto 100%; }
 
 .promo-breadcrumbs {
   color: #fff; }
@@ -766,9 +765,9 @@
       border-bottom: 1px solid #ced4da; }
   .solutions-item-title {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 30%;
-            flex: 0 0 30%;
-    max-width: 30%;
+        -ms-flex: 0 0 28%;
+            flex: 0 0 28%;
+    max-width: 28%;
     padding-left: 90px;
     font-family: "MullerNarrow";
     font-size: 1.875rem;
