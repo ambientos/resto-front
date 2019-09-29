@@ -255,7 +255,10 @@
   .ico._search-lesson::before {
     background-image: url("../i/search-lesson.svg"); }
   .ico[class*='_link'] {
-    width: 45px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45px;
+            flex: 0 0 45px;
+    max-width: 45px;
     height: 45px; }
     .ico[class*='_link']:first-child {
       margin-right: 1em; }
@@ -408,6 +411,10 @@
 .promo-more {
   margin-top: 2em; }
 
+.promo-map {
+  padding: 15px;
+  background-color: #f8f9fa; }
+
 .list-ico {
   counter-reset: list-ico; }
   .list-ico-item {
@@ -502,11 +509,18 @@
         .list-links-item-link {
           -webkit-transition: none;
           transition: none; } }
+      .list-links-item-link._sm {
+        padding: 36px 18px 18px 18px; }
       .list-links-item-link:hover {
         border-bottom-color: #f8f9fa;
         -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
                 box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1);
         z-index: 1; }
+    .list-links-item-text-sm {
+      font-size: .875rem; }
+      .list-links-item-text-sm a {
+        border-bottom-width: 1px;
+        border-bottom-style: dotted; }
 
 .list-filter {
   margin-bottom: 0; }

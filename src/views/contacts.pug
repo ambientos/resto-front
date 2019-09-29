@@ -5,5 +5,82 @@ block meta
 
 block content
 	.container-inner.container
-		.widget
-			h1 Контакты
+		.row
+			.col-md-6
+				.widget
+					h1 Контакты
+					ul.list-links.d-sm-flex.flex-wrap
+						li.list-links-item.d-flex.col-md-6
+							.list-links-item-link._sm.d-flex.align-items-center(href='/')
+								include ./blocks/main/i/phone.svg
+								span.list-links-item-text-sm
+									| Телефон
+									br
+									| +7 495 790-5854
+						li.list-links-item.d-flex.col-md-6
+							.list-links-item-link._sm.d-flex.align-items-center(href='/')
+								include ./blocks/main/i/qa.svg
+								span.list-links-item-text-sm
+									| По общим вопросам
+									br
+									a(href='mailto:info@terminalmsk.com') info@terminalmsk.com
+						li.list-links-item.d-flex.col-md-6
+							.list-links-item-link._sm.d-flex.align-items-center(href='/')
+								include ./blocks/main/i/operator.svg
+								span.list-links-item-text-sm
+									| Техническая поддержка
+									br
+									a(href='mailto:support@terminalmsk.com') support@terminalmsk.com
+						li.list-links-item.d-flex.col-md-6
+							.list-links-item-link._sm.d-flex.align-items-center(href='/')
+								include ./blocks/main/i/mark.svg
+								span.list-links-item-text-sm
+									| Адрес
+									br
+									| 141410, г.&nbsp;Химки, ул.&nbsp;Ленинградская,&nbsp;9
+						li.list-links-item.d-flex.col-md-6
+							.list-links-item-link._sm.d-flex.align-items-center.justify-content-around
+								a(href='/')
+									include ./blocks/main/i/tel.svg
+								a(href='/')
+									include ./blocks/main/i/viber.svg
+								a(href='/')
+									include ./blocks/main/i/telegram.svg
+						li.list-links-item.d-flex.col-md-6
+							a.list-links-item-link._sm.d-flex.align-items-center(href='/')
+								include ./blocks/main/i/repai.svg
+								span.list-links-item-text-sm ВОЙТИ В SERVICEDESK
+				.widget
+					.h1 Напишите нам
+					form
+						.row
+							.col-md-6
+								.form-group
+									label
+										b E-mail
+									input.form-control(type='email')
+							.col-md-6
+								.form-group
+									label
+										b Ваше имя
+									input.form-control(type='text')
+						.form-group
+							label
+								b Ваш вопрос
+							textarea.form-control
+						.row
+							.col-md-6
+								.form-group
+									input.btn-block.btn-secondary.btn(type='submit', value='Отправить')
+							.col-md-6
+								.form-group
+									| Отправляя свои данные через эту форму вы соглашаетесь с 
+									a(href='/') политикой обработки персональных данных
+			.col-md-6
+				.widget
+					.h1 Как проехать
+					.promo-map
+						script(
+							async,
+							src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9ec1b2d495cd3dd47e45f9f45cdbdb848bef28469e8ef6092a13e22b821a28e6&amp;width=100%25&amp;height=650&amp;lang=ru_RU'
+						)

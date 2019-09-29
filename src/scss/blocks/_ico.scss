@@ -128,7 +128,7 @@
 	&[class*='_link'] {
 		$size: $grid-gutter-width * 1.5;
 
-		width: $size;
+		@include flex-width($size);
 		height: $size;
 
 		&:first-child {
