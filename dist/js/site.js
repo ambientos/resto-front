@@ -5,11 +5,13 @@
 
 	$('.carousel-container').each(function(){
 		var container = $(this),
-			carousel = container.find('.carousel')
+			carousel = container.find('.carousel'),
+			margin = container.data('margin') || 0,
+			items = container.data('items') || 0
 
-		carousel.owlCarousel({
+		options = {
 			items: 1,
-			margin: 0,
+			margin: +margin,
 			loop: true,
 			nav: true,
 			dots: false,
@@ -27,7 +29,23 @@
 					items: 4
 				}
 			}
-		})
+		}
+
+		if ( '3' == items ) {
+			options.responsive = {
+				0: {
+					items: 1
+				},
+				768: {
+					items: 2
+				},
+				1200: {
+					items: 3
+				}
+			}
+		}
+
+		carousel.owlCarousel(options)
 	})
 
 

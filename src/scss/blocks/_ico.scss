@@ -162,6 +162,33 @@
 
 
 	//
+	// Promo icons
+	//
+
+	&[class*='_promo'] {
+		$size: $grid-gutter-width * 1.2;
+
+		&::before {
+			@include flex-width($size);
+			width: $size;
+			height: $size;
+			margin: {
+				top: -.3em;
+				right: .5em;
+			}
+		}
+	}
+
+	@each $ico in $promo-icons {
+		&._promo-#{$ico} {
+			&::before {
+				background-image: url('#{$img-dir}promo-#{$ico}.svg');
+			}
+		}
+	}
+
+
+	//
 	// Other icons
 	//
 
