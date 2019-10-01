@@ -1,0 +1,60 @@
+extends ./layout/layout.pug
+
+block meta
+	title Список товаров
+
+block content
+	.container-inner.container
+		.row.align-items-center
+			.col
+				+breadcrumbs({ 'type': 'product-list', 'items': ['Магазин', 'POS- оборудование', 'Компьютеры и сканеры']})
+			include ./blocks/main/filter-sort.pug
+
+		.row
+			.col-md-3
+				ul.product-menu.list-unstyled
+					li
+						a(href='/')
+							span.ico
+								include ./blocks/main/i/person.svg
+							| Системы вызова персонала
+					li
+						a(href='/')
+							span.ico
+								include ./blocks/main/i/cam.svg
+							| Видеонаблюдение
+					li
+						a(href='/')
+							span.ico
+								include ./blocks/main/i/note.svg
+							| Pos-оборудование
+						ul.sub-menu
+							- var subMenu = ['Компьютеры и сканеры', 'Денежные ящики', 'Чековые принтеры', 'Звонки для принтеров', 'Весы', 'Считыватели магнитных карт', 'Фискальные регистраторы', 'Pos-моноблоки и планшеты', 'Доп. аксессуары', 'Сканеры штрих.кодов'];
+							each subMenuItem in subMenu
+								li
+									a(href='/')= subMenuItem
+					li
+						a(href='/')
+							span.ico
+								include ./blocks/main/i/disc.svg
+							| IIKO модули и лицензии&nbsp;
+					li
+						a(href='/')
+							span.ico
+								include ./blocks/main/i/box.svg
+							| Готовые решения
+
+			.col-md-9
+				.product-list-info
+					p Самый ходовой моноблок в линейке Sam4s. Для R-Keeper под DOS или Windows - идеальный вариант. Имеет все нужные порты и не глючит, не имеет врожденных болезней. Да,a он толстый и не модный - это отнюдь не ключевая особенность для рабочей лошадки. Дополнительно оснащается собственным дисплеем покупателя и двумя видами гостевых мониторов 7" или 15".  (базовая комплектация - без SSD и MSR)
+
+				.widget
+					.product-list.d-md-flex.flex-md-wrap
+						- var productList = [{'avail': true, 'thumb': '31.jpg', 'title': 'Моноблок Sam4s SPT-7000', 'price': '48 300₽'}, {'thumb': '32.jpg', 'title': 'Моноблок Zonerich ZQ-T9150 (АТОЛ VIVA Light)', 'price': '37 000₽'}, {'avail': true, 'thumb': '33.jpg', 'title': 'Моноблок Zonerich ZQ-T9120 MINI (АТОЛ VIVA MINI)', 'price': '37 000₽'}, {'thumb': '34.jpg', 'title': 'Моноблок Sam4s SPT-7000', 'price': '48 300₽'}, {'thumb': '35.jpg', 'title': 'Моноблок Zonerich ZQ-T9150 (АТОЛ VIVA Light)', 'price': '37 000₽'}, {'avail': true, 'thumb': '31.jpg', 'title': 'Моноблок Sam4s SPT-7000', 'price': '48 300₽'}];
+							each productItem in productList
+								+product-item(productItem, 'col-md-4')
+
+					.product-list-footer
+						.d-sm-flex.justify-content-sm-between.align-items-sm-center
+							include ./blocks/main/_pagination.pug
+							include ./blocks/main/filter-sort.pug

@@ -1,6 +1,6 @@
 mixin breadcrumbs(object)
 	- var type = object && object.type ? object.type : 'general';
-	div(class='breadcrumbs'+ ( 'promo' === type ? ' promo-breadcrumbs' : ''), typeof='BreadcrumbList', vocab='http://schema.org/')
+	div(class='breadcrumbs'+ ( 'promo' === type ? ' promo-breadcrumbs' : ( 'product-list' === type ? ' _product-list' : '' ) ), typeof='BreadcrumbList', vocab='http://schema.org/')
 		each item, index in object.items
 			span(property='itemListElement', typeof='ListItem')
 				a(property='item', typeof='WebPage', href='/')

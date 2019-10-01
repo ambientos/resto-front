@@ -318,6 +318,15 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #adb5bd; }
+  .breadcrumbs._product-list {
+    font-family: "MullerNarrow";
+    font-size: 1.375rem;
+    font-weight: 300;
+    text-transform: none;
+    color: #000c1a; }
+    .breadcrumbs._product-list > :last-child a {
+      font-weight: 800;
+      color: #d03239; }
   .breadcrumbs .delimiter {
     margin: 0 .9em 0 .7em;
     font-size: 90%;
@@ -720,7 +729,7 @@
 .list-filter {
   margin-bottom: 0; }
   .list-filter-label {
-    margin-right: .5em; }
+    margin-right: 1em; }
   .list-filter-label,
   .list-filter li {
     font-size: .875rem; }
@@ -744,14 +753,28 @@
 .product-carousel, .product-list {
   margin-top: 3em; }
 
+.product-list-info {
+  padding: 2em;
+  line-height: 1.7;
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
+  .product-list-info p:last-child {
+    margin-bottom: 0; }
+
+.product-list-footer {
+  margin-top: 2em; }
+
 .product-carousel .owl-item.active {
   margin-right: -1px; }
+  .product-carousel .owl-item.active .product-item {
+    margin: 0; }
 
 .product-carousel .owl-item:hover {
   z-index: 1; }
 
 .product-item {
   position: relative;
+  margin: -1px -1px 0 0;
   padding: 45px 30px 30px;
   border: 1px solid #e9ecef;
   -webkit-transition: all 0.2s ease-in-out;
@@ -761,7 +784,8 @@
       -webkit-transition: none;
       transition: none; } }
   .product-item:hover {
-    border-color: #ced4da; }
+    border-color: #ced4da;
+    z-index: 1; }
     .product-item:hover ._stock {
       color: #1fc160; }
     .product-item:hover ._order {
@@ -815,6 +839,33 @@
       border-bottom-style: dotted; }
       .product-item-more a:hover {
         color: #d03239; }
+
+.product-menu > li {
+  display: block; }
+  .product-menu > li > a {
+    position: relative;
+    margin: .3em 0;
+    padding: .5em .2em .5em 2.5em;
+    font-weight: 700; }
+    .product-menu > li > a:hover {
+      background-color: #f2f4f5; }
+    .product-menu > li > a .ico > svg {
+      position: absolute;
+      left: .4em;
+      top: 0;
+      bottom: 0;
+      width: 20.01px;
+      height: 20.01px;
+      margin: auto; }
+
+.product-menu ul {
+  padding-left: 2.5em;
+  list-style: none; }
+  .product-menu ul li {
+    margin: 1em 0; }
+
+.product-menu a {
+  display: block; }
 
 .knowledge-title {
   margin-bottom: 0;
