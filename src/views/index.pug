@@ -5,7 +5,7 @@ block meta
 
 block content
 	.promo
-		.promo-container.d-flex.align-items-center(style='background-image:url(t/1.jpg)')
+		.promo-container.d-flex.align-items-center._cover-bg(style='background-image:url(t/1.jpg)')
 			.container
 				.promo-content._home
 					h1.promo-title._home Автоматизация ресторанов
@@ -55,7 +55,7 @@ block content
 							.promo-type-item-thumb
 								img(src='t/'+ promoTypeListItem.thumb +'.jpg', alt)
 
-	.widget._light-gray
+	.widget._nomargin._light-gray
 		.container-inner.container
 			.promo-adv-container
 				.row
@@ -114,7 +114,7 @@ block content
 							.promo-type-item-thumb
 								img(src='t/'+ promoTypeListItem.thumb +'.jpg', alt)
 
-	.widget._night
+	.widget._nomargin._with-pads._night
 		.widget-title.h1._big._blue Нам доверяют:&nbsp;
 		.carousel-container.container-inner.container(
 			data-items='3',
@@ -140,7 +140,7 @@ block content
 			.d-flex.justify-content-around
 				a.btn.btn-sm(href='/') Оставить отзыв
 
-	.widget
+	.widget._nomargin._with-pads
 		.container-inner.container
 			.h2.widget-title._primary._big Готовые решения
 			.widget-subtitle.text-center Амфибрахий, основываясь на парадоксальном совмещении исключающих друг друга принципов характерности и поэтичности, заставляет перейти к более сложной системе дифференциальных уравнений, если добавить диалогический дискурс
@@ -150,11 +150,11 @@ block content
 				each solutionItem in solutionList
 					+solution(solutionItem)
 
-	.widget._nomargin._dark._important
+	.widget._nomargin._with-pads._dark._important
 		.container-inner.container
 			include ./blocks/main/_callback-form-inline.pug
 
-	.widget._nomargin._gray
+	.widget._nomargin._with-pads._gray
 		.container-inner.container
 			.h2.widget-title._big Свежие статьи из базы знаний
 			.knowledge-article-list.row

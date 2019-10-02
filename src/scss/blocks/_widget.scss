@@ -16,10 +16,17 @@
 		margin: 0;
 	}
 
+	&._gray,
+	&._light-gray {
+		padding: $margin-y * .5 0;
+	}
+
+	&._with-pads {
+		padding: $margin-y * 2 0;
+	}
+
 	&._dark,
 	&._night {
-		padding: $margin-y * 2 0;
-
 		.widget-title {
 			margin-bottom: 1em;
 			color: inherit;
@@ -49,11 +56,6 @@
 			content: '';
 			background-color: darken($sky, 53%);
 		}
-	}
-
-	&._gray,
-	&._light-gray {
-		padding: $margin-y * .5 0;
 	}
 
 	&._gray {
