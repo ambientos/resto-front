@@ -1646,7 +1646,7 @@ mark,
   display: block;
   width: 100%;
   height: calc(1.5em + 1.412rem + 2px);
-  padding: 0.706rem 1.44rem;
+  padding: 0.706rem 1.2rem;
   font-size: 1.05875rem;
   font-weight: 400;
   line-height: 1.5;
@@ -1847,8 +1847,8 @@ textarea.form-control {
 
 .was-validated .custom-select:valid, .custom-select.is-valid {
   border-color: #1fc160;
-  padding-right: calc((1em + 1.412rem) * 3 / 4 + 2.44rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.44rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%231fc160' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 2.44rem/calc(0.75em + 0.706rem) calc(0.75em + 0.706rem); }
+  padding-right: calc((1em + 1.412rem) * 3 / 4 + 2.2rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.2rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%231fc160' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") #fff no-repeat center right 2.2rem/calc(0.75em + 0.706rem) calc(0.75em + 0.706rem); }
   .was-validated .custom-select:valid:focus, .custom-select.is-valid:focus {
     border-color: #1fc160;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(31, 193, 96, 0.25);
@@ -1948,8 +1948,8 @@ textarea.form-control {
 
 .was-validated .custom-select:invalid, .custom-select.is-invalid {
   border-color: #d03239;
-  padding-right: calc((1em + 1.412rem) * 3 / 4 + 2.44rem);
-  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.44rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d03239' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d03239' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 2.44rem/calc(0.75em + 0.706rem) calc(0.75em + 0.706rem); }
+  padding-right: calc((1em + 1.412rem) * 3 / 4 + 2.2rem);
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 1.2rem center/8px 10px, url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23d03239' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d03239' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") #fff no-repeat center right 2.2rem/calc(0.75em + 0.706rem) calc(0.75em + 0.706rem); }
   .was-validated .custom-select:invalid:focus, .custom-select.is-invalid:focus {
     border-color: #d03239;
     -webkit-box-shadow: 0 0 0 0.2rem rgba(208, 50, 57, 0.25);
@@ -2113,7 +2113,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 700;
-  color: #5a5a5a;
+  color: #26303b;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: .1ex;
@@ -2127,7 +2127,7 @@ textarea.form-control {
   border: 1px solid transparent;
   -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
           box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
-  padding: 1rem 1.8rem;
+  padding: 1rem 1.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
   border-radius: 1.75rem;
@@ -2140,7 +2140,7 @@ textarea.form-control {
       -webkit-transition: none;
       transition: none; } }
   .btn:hover {
-    color: #5a5a5a;
+    color: #26303b;
     text-decoration: none;
     -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
             box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25); }

@@ -170,4 +170,165 @@
 			display: block;
 		}
 	}
+
+	&-buy {
+		&-item {
+			margin: 1em 0;
+		}
+
+		&-price {
+			font: {
+				size: 2.75rem;
+				weight: $font-weight-extra-bold;
+			}
+			line-height: 1;
+			white-space: nowrap;
+
+			&,
+			&-label {
+				font-family: $font-sub;
+				color: $secondary;
+			}
+
+			&-label {
+				display: block;
+				min-width: 180px;
+				font-weight: $font-weight-bold;
+			}
+		}
+
+		&-btn {
+			&:not(:first-child) {
+				.btn {
+					border: {
+						top-left-radius: 0;
+						bottom-left-radius: 0;
+					}
+				}
+			}
+
+			&:not(:last-child) {
+				.btn {
+					border: {
+						top-right-radius: 0;
+						bottom-right-radius: 0;
+					}
+				}
+			}
+
+			.btn {
+				$padding-y: .5em;
+
+				padding: {
+					top: $padding-y;
+					bottom: $padding-y;
+				}
+			}
+		}
+	}
+
+	&-chars {
+		$padding-x: 1em;
+
+		&-item {
+			margin: .5em 0;
+			border-bottom: {
+				width: 1px;
+				style: dotted;
+			}
+		}
+
+		&-title,
+		&-v {
+			$padding-y: .2em;
+
+			display: block;
+			position: relative;
+			bottom: -$padding-y;
+			padding: {
+				top: $padding-y;
+				bottom: $padding-y;
+			}
+			background-color: $white;
+		}
+
+		&-title {
+			padding-right: $padding-x;
+		}
+
+		&-v {
+			padding-left: $padding-x;
+		}
+
+		&-all {
+			margin-top: 1.5em;
+			font-weight: $font-weight-bold;
+			color: $secondary;
+			cursor: pointer;
+		}
+	}
+
+	&-thumb {
+		position: relative;
+		margin-top: 2em;
+
+		&,
+		&-item {
+			border: 1px solid $gray-200;
+		}
+	}
+
+	&-best-sale {
+		$size: 110px;
+		$margin: $grid-gutter-width * .5;
+
+		position: absolute;
+		top: -$margin;
+		right: -$margin;
+		width: $size;
+		height: $size;
+		padding: 1.3em .5em 0;
+		font-size: 1.0625rem;
+		text: {
+			align: center;
+			transform: uppercase;
+		}
+		line-height: 1.2;
+		color: $secondary;
+		background: {
+			repeat: no-repeat;
+			position: 50% 50%;
+			image: url('#{$img-dir}label.svg');
+			size: contain;
+		}
+
+		&::before {
+			$size: $grid-gutter-width * .5;
+
+			display: block;
+			width: $size;
+			height: $size;
+			margin: 0 auto .4em;
+			content: '';
+			background: {
+				repeat: no-repeat;
+				position: 50% 50%;
+				image: url('#{$img-dir}garant.svg');
+				size: contain;
+			}
+		}
+	}
+
+	&-docs {
+		&-item {
+			&,
+			span {
+				display: block;
+			}
+
+			i {
+				font-style: normal;
+			}
+		}
+	}
 }

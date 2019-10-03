@@ -24,7 +24,7 @@
 
 	&[class*='_btn-ico'] {
 		&::before {
-			$size: 20px;
+			$size: $grid-gutter-width * .5;
 
 			width: $size;
 			height: $size;
@@ -198,6 +198,35 @@
 
 
 	//
+	// File Types icons
+	//
+
+	&[class*='_file'] {
+		$size: $grid-gutter-width * 1.4;
+
+		&::before {
+			@include flex-width($size);
+
+			width: $size;
+			height: $size;
+			border-radius: 50%;
+			background-color: $gray-200;
+		}
+	}
+
+	@each $ico in $file-icons {
+		&._file-#{$ico} {
+			&::before {
+				background: {
+					image: url('#{$img-dir}file-#{$ico}.svg');
+					size: auto 50%;
+				}
+			}
+		}
+	}
+
+
+	//
 	// Other icons
 	//
 
@@ -240,5 +269,17 @@
 			right: .5em;
 		}
 		background-image: url('#{$img-dir}chevron-left.svg');
+	}
+
+	&._list::before {
+		$size: 12px;
+
+		width: $size;
+		height: $size;
+		margin: {
+			top: .2em;
+			right: .5em;
+		}
+		background-image: url('#{$img-dir}list.svg');
 	}
 }

@@ -1,0 +1,79 @@
+extends ./layout/layout.pug
+
+block meta
+	title Страница товара
+
+block content
+	.container-inner.container
+		.row.align-items-center
+			.col-md-6
+				+breadcrumbs({ 'type': 'product-list', 'items': ['Магазин', 'POS- оборудование', 'Компьютеры и сканеры']})
+			.col-md-6.d-flex.justify-content-between
+				a.btn(href='/')
+					span.ico._btn-ico-test
+					span Бесплатный тест оборудования
+				a.btn(href='/')
+					span.ico._btn-ico-question
+					span Задать вопрос
+
+		.row
+			.col-md-6
+				h1 Моноблок Sam4s SPT-4 700
+				p Самый ходовой моноблок в линейке Sam4s. Для R-Keeper под DOS или Windows - идеальный вариант. Имеет все нужные порты и не глючит, не имеет врожденных болезней. Да, он толстый и не модный - это отнюдь не ключевая особенность для рабочей лошадки. Дополнительно оснащается собственным дисплеем покупателя и двумя видами гостевых мониторов 7" или 15". (базовая комплектация - без SSD и MSR)
+
+				.product-buy.d-flex.align-items-center.justify-content-between
+					.product-buy-item
+						.product-buy-price-label Стоимость
+						.product-buy-price 74 000₽
+					.product-buy-item.d-flex
+						.product-buy-btn
+							button.btn.btn-primary.d-flex.align-items-center(type='button')
+								span.ico._btn-ico-card
+								span Купить в&nbsp;1&nbsp;клик
+						.product-buy-btn
+							button.btn.btn-secondary.d-flex.align-items-center(type='submit')
+								span.ico._btn-ico-cart
+								span Добавить в&nbsp;корзину
+
+				.widget
+					h2.widget-title Характеристики
+					ul.product-chars.list-unstyled
+						- var charsList = [{'title': 'Бренд', 'v': 'Sam4s'}, {'title': 'Тип', 'v': 'Моноблок'}, {'title': 'Цвет', 'v': 'Черный'}, {'title': 'Размер', 'v': '2'}, {'title': 'Артикул', 'v': 'A316.217'}];
+						each charsListItem in charsList
+							li.product-chars-item.d-flex.justify-content-between
+								span.product-chars-title= charsListItem.title
+								span.product-chars-v= charsListItem.v
+					.product-chars-all
+						.ico._list Смотреть полное описание&nbsp;
+
+			.col-md-6
+				figure.product-thumb
+					img.img-fluid.img-block(src='t/44.jpg', alt)
+					span.product-best-sale Гарантия лучшей цены
+				.carousel-container(data-margin='10')
+					.product-thumb-carousel.carousel.owl-carousel
+						- var productThumbs = ['45', '46', '47'];
+						each productThumb in productThumbs
+							.product-thumb-item
+								img.img-fluid.img-block(src='t/'+ productThumb +'.jpg', alt)
+
+		.widget
+			h2.widget-title Документация и файлы для загрузки&nbsp;
+			.product-docs-list.row
+				- var docList = [{'type': 'pdf', 'title': 'Каталог оборудования Sam4s (v5 2015)', 'size': '443.5'}, {'type': 'doc', 'title': 'Инструкция по настройке програмного пакета', 'size': '231.5'}, {'type': 'zip', 'title': 'Архив драйверов', 'size': '743.1'}];
+				each docListItem in docList
+					a.product-docs-item.col-md-4.d-flex.align-items-center(href='/')
+						span(class='product-docs-item-type ico _file-'+ docListItem.type)
+						span
+							span= docListItem.title
+							span
+								| Размер: 
+								i= docListItem.size
+								|  Кб
+
+		.widget
+			.h2.widget-title С этим товаром часто покупают&nbsp;
+			.product-list.d-md-flex.flex-md-wrap
+				- var productList = [{'avail': true, 'thumb': '31.jpg', 'title': 'Моноблок Sam4s SPT-7000', 'price': '48 300₽'}, {'thumb': '32.jpg', 'title': 'Моноблок Zonerich ZQ-T9150 (АТОЛ VIVA Light)', 'price': '37 000₽'}, {'avail': true, 'thumb': '33.jpg', 'title': 'Моноблок Zonerich ZQ-T9120 MINI (АТОЛ VIVA MINI)', 'price': '37 000₽'}, {'thumb': '34.jpg', 'title': 'Моноблок Sam4s SPT-7000', 'price': '48 300₽'}];
+				each productItem in productList
+					+product-item(productItem, 'col-md-3')

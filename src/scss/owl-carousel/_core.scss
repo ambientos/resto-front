@@ -83,6 +83,12 @@
 		font: inherit;
 	}
 
+	.owl-nav button.owl-prev.disabled,
+	.owl-nav button.owl-next.disabled {
+		opacity: .3;
+		cursor: not-allowed;
+	}
+
 	&.owl-loaded {
 		display: block;
 	}

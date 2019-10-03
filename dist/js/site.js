@@ -6,13 +6,14 @@
 	$('.carousel-container').each(function(){
 		var container = $(this),
 			carousel = container.find('.carousel'),
+			loop = container.data('loop') || 0,
 			margin = container.data('margin') || 0,
 			items = container.data('items') || 0
 
 		options = {
 			items: 1,
 			margin: +margin,
-			loop: true,
+			loop: loop,
 			nav: true,
 			dots: false,
 			responsive: {
@@ -29,6 +30,10 @@
 					items: 4
 				}
 			}
+		}
+
+		if ( '1' == items ) {
+			options.responsive = false
 		}
 
 		if ( '3' == items ) {
