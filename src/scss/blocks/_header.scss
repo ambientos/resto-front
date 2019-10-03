@@ -8,29 +8,22 @@
 
 	&-logo {
 		margin-bottom: 0;
-	}
 
-	&-phone {
-		&-num {
-			font: {
-				family: $font-sub;
-				size: 1.5rem;
-				weight: $font-weight-extra-bold;
-			}
+		a {
+			display: block;
+			white-space: nowrap;
 
-			svg {
-				$size: 16px;
-
-				width: $size;
-				height: $size;
-				margin-top: .3em;
+			img:first-child {
+				margin-right: .5em;
 			}
 		}
 	}
 
-	&-social {
-		&-item:not(:last-child) {
-			margin-right: .5em;
+	&-phone-text {
+		font: {
+			family: $font-sub;
+			size: 1.5rem;
+			weight: $font-weight-extra-bold;
 		}
 	}
 

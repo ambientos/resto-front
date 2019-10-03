@@ -41,10 +41,11 @@
 
 
 	//
-	// Top icons
+	// Top and Bottom icons
 	//
 
-	&[class*='_top-'] {
+	&[class*='_top-'],
+	&[class*='_bottom-'] {
 		&::before {
 			$size: 24px;
 
@@ -57,6 +58,14 @@
 		&._top-#{$ico} {
 			&::before {
 				background-image: url('#{$img-dir}top-#{$ico}.svg');
+			}
+		}
+	}
+
+	@each $ico in $bottom-icons {
+		&._bottom-#{$ico} {
+			&::before {
+				background-image: url('#{$img-dir}bottom-#{$ico}.svg');
 			}
 		}
 	}

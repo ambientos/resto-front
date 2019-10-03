@@ -1,0 +1,8 @@
+mixin menu-with-title(title, items, subclass)
+	.footer-menu-container
+		if title
+			.footer-menu-title= title
+		ul(class='footer-menu list-unstyled'+ (subclass ? ' _'+ subclass : ''))
+			each item in items
+				li
+					a(href='/')= item

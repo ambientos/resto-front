@@ -2,14 +2,56 @@ header.header
 	.container
 		.header-container
 			.d-flex.flex-wrap.flex-md-nowrap.align-items-center.justify-content-around
-				include _logo.pug
+				figure.header-logo
+					a(href='/')
+						img(
+							src='i/logo-thumb.svg',
+							width='60',
+							alt='Resto Service'
+						)
+						img(
+							src='i/logo-title.svg',
+							width='80',
+							alt
+						)
 
-				include _callback.pug
+				.header-callback
+					span.btn.btn-sm.btn-primary Позвоните мне!
 
-				include _phone.pug
+				.header-phone
+					a.navi-with-icon.d-flex.align-items-center.tel(href="tel:+74952323232")
+						include ../main/i/tele.svg
+						span.header-phone-text +7 (495) 232-32-32
 
-				include _socials.pug
+				.header-social-list.navi-social-list
+					- var socials = [ 'wa', 'tg', 'vb', 'sk' ];
+					each socialType in socials
+						a(href='/', class='header-social-item navi-social-item _top-'+ socialType +' ico') &nbsp;
 
-				include _cart.pug
+				.header-cart._cart-mini.ico
+					span.header-cart-num 4
+					span.header-cart-label
+						| 4 товара на сумму 
+						span.header-cart-sum 34 500 руб.
+					a.header-cart-checkout(href="/") Оформить
 
-	include _nav.pug
+	nav.header-nav.navbar.navbar-dark.navbar-expand-lg
+		.container
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+
+			.collapse.navbar-collapse.justify-content-between#navbarSupportedContent
+				ul.header-nav-list.navbar-nav
+					- var menuList = [{'title': 'О нас'}, {'title': 'Решения', 'items': ['Решение 1', 'Решение 2']}, {'title': 'Услуги', 'items': ['Услуга 1', 'Услуга 2']}, {'title': 'Магазин', 'items': ['Услуга 1', 'Услуга 2']}, {'title': 'База знаний'}, {'title': 'Почему IIKO'}, {'title': 'Контакты'}];
+					each menuListItem in menuList
+						li(class='nav-item'+ ( menuListItem.items ? ' menu-item-has-children' : '' ))
+							a.nav-link(href='/')= menuListItem.title
+							if menuListItem.items
+								ul
+									each menuListSubItem in menuListItem.items
+										li.nav-item
+											a.nav-link(href='/')= menuListSubItem
+
+				form.form-inline
+					button.btn.btn-ico(type='button')
+						include ./i/search.svg
