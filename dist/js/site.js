@@ -83,6 +83,17 @@
 
 		var toggle = control.parents('.calc-form-qty').eq(0).find('.calc-form-qty-toggle')
 
+		changeQty(control, toggle)
+	})
+
+	$('.cart-product-quantity-container [type="number"]').each(function(){
+		var control = $(this),
+			toggle = control.parents('.cart-product-quantity-container').eq(0).find('.btn')
+
+		changeQty(control, toggle)
+	})
+
+	function changeQty(control, toggle){
 		toggle.on('click', function(e){
 			var toggle = $(this),
 				controlValue = control.val()
@@ -96,5 +107,5 @@
 				control.val( ++controlValue )
 			}
 		})
-	})
+	}
 })(jQuery)

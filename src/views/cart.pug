@@ -1,0 +1,77 @@
+extends ./layout/layout.pug
+
+block meta
+	title Корзина
+
+block content
+	.container-inner.container
+		.widget
+			h1 Корзина
+			.woocommerce
+				form.woocommerce-cart-form(
+					action='/',
+					method='post'
+				)
+					table.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents
+						thead
+							tr.cart_thead
+								th.cart-product-thumbnail &nbsp;
+								th.cart-product-name Товар
+								th.cart-product-price Цена за единицу
+								th.cart-product-quantity Количество
+								th.cart-product-remove Удалить
+								th.cart-product-subtotal Общая цена
+						tbody
+							- var cartItems = [{'thumb': '27', 'title': 'Моноблок Zonerich ZQ-T9150 (АТОЛ VIVA Light)', 'price': '44 000'}, {'thumb': '28', 'title': 'Моноблоvк Zonerich ZQ-T9120 MINI (АТОЛ VIVA MINI)', 'price': '36 300'}, {'thumb': '29', 'title': 'Моноблок Sam4s SPT-7000', 'price': '72 000'}];
+							each cartItem in cartItems
+								tr.woocommerce-cart-form__cart-item.cart_item
+									td.cart-product-thumbnail
+										a(href='/')
+											img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail(
+												src='t/'+ cartItem.thumb +'.jpg',
+												alt
+											)
+
+									td.cart-product-name(data-title='Товар')
+										a.cart-product-title(href='/')= cartItem.title
+										.cart-product-article артикул А3192.394&nbsp;
+
+									td.cart-product-price(data-title='Цена')
+										span.woocommerce-Price-amount.amount
+											span= cartItem.price
+											| &nbsp;
+											span.woocommerce-Price-currencySymbol ₽
+
+									td.cart-product-quantity(data-title='Количество')
+										.cart-product-quantity-container.d-flex.justify-content-center
+											span.cart-product-quantity-toggle.btn.btn-gray.btn-ico._minus &minus;
+											input(type='number', step='1', min='0', name='qty', value='1', title='Кол-во', size='4', pattern='[0-9]*', inputmode='numeric')
+											span.cart-product-quantity-toggle.btn.btn-gray.btn-ico._plus +
+
+									td.cart-product-remove
+										a.btn.btn-gray.btn-ico.ico._btn-ico-remove(
+											href='/',
+											aria-label='Удалить эту позицию',
+										)
+
+									td.cart-product-subtotal(data-title='Итого')
+										span.woocommerce-Price-amount.amount
+											span= cartItem.price
+											| &nbsp;
+											span.woocommerce-Price-currencySymbol ₽
+
+						tfoot
+							tr.cart_tfoot
+								td.actions(colspan='6')
+									.row.d-flex.align-items-center.justify-content-between
+										.form-input-with-button.form-group.col-md-5
+											input.form-control(type='text', placeholder='E-mail')
+											input.btn.btn-light(type='button', value='Отправить на E-mail')
+										.form-group.col-md-4
+											.form-note
+												| Отправляя свои данные через эти формы, вы соглашаетесь с 
+												a(href='/') политикой обработки персональных данных
+										.form-group.col-md.d-flex.justify-content-end
+											button.btn.btn-primary.btn-block.d-flex.align-items-center.justify-content-center(type='submit', value='Купить в 1 клик')
+												span.ico._btn-ico-card
+												span Купить&nbsp;в&nbsp;1&nbsp;клик

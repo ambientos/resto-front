@@ -246,6 +246,8 @@
     background-image: url("../i/btn-card.svg"); }
   .ico._btn-ico-cart::before {
     background-image: url("../i/btn-cart.svg"); }
+  .ico._btn-ico-remove::before {
+    background-image: url("../i/btn-remove.svg"); }
   .ico[class*='_top-']::before, .ico[class*='_bottom-']::before {
     width: 24px;
     height: 24px; }
@@ -733,13 +735,13 @@
     .list-ico-item::before {
       display: block;
       -webkit-box-flex: 0;
-          -ms-flex: 0 0 57px;
-              flex: 0 0 57px;
-      max-width: 57px;
-      height: 57px;
-      font-size: 1.9375rem;
+          -ms-flex: 0 0 42px;
+              flex: 0 0 42px;
+      max-width: 42px;
+      height: 42px;
+      font-size: 1.75rem;
       font-weight: 800;
-      line-height: 2;
+      line-height: 1.6;
       text-align: center;
       color: #d03239;
       border-width: 3px;
@@ -1324,5 +1326,45 @@
   .search-list-item-type {
     margin-bottom: .5em;
     color: #d03239; }
+
+.cart {
+  width: 100%; }
+  .cart_thead, .cart_item {
+    border-bottom: 1px solid #e9ecef; }
+  .cart-product-thumbnail {
+    width: 130px; }
+  .cart-product-title {
+    font-size: .9375rem;
+    color: #26303b; }
+  .cart-product-article {
+    font-size: .875rem;
+    color: #5a5a5a; }
+  .cart-product-quantity, .cart-product-remove, .cart-product-price {
+    text-align: center; }
+  .cart-product-quantity-toggle {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    padding: .15em .6em; }
+  .cart-product-quantity input[type="number"] {
+    width: 30px;
+    text-align: center;
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
+    border: none; }
+  .cart-product-subtotal {
+    text-align: right; }
+  .cart th,
+  .cart td {
+    padding: .8em .5em; }
+  .cart th {
+    font-size: .875rem;
+    color: #26303b; }
+  .cart td.cart-product-price, .cart td.cart-product-subtotal {
+    font-family: "MullerNarrow";
+    font-size: .9375rem;
+    font-weight: 800; }
+  .cart_tfoot td {
+    padding: 2em 0 1em; }
 
 /*# sourceMappingURL=site.css.map */

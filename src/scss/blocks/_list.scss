@@ -30,7 +30,7 @@
 			}
 
 			&::before {
-				$size: $grid-gutter-width * 1.9;
+				$size: $grid-gutter-width * 1.4;
 				$color: $red;
 
 				display: block;
@@ -39,10 +39,10 @@
 
 				height: $size;
 				font: {
-					size: 1.9375rem;
+					size: 1.75rem;
 					weight: $font-weight-extra-bold;
 				}
-				line-height: 2;
+				line-height: 1.6;
 				text-align: center;
 				color: $primary;
 				border: {
