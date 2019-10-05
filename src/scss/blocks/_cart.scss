@@ -9,6 +9,11 @@
 	&-product {
 		&-thumbnail {
 			width: 130px;
+
+			@include media-breakpoint-down('xs') {
+				width: 100%;
+				text-align: center !important;
+			}
 		}
 
 		&-title {
@@ -52,6 +57,14 @@
 		}
 	}
 
+	thead {
+		display: none;
+
+		@include media-breakpoint-up('sm') {
+			display: table-header-group;
+		}
+	}
+
 	th,
 	td {
 		padding: .8em .5em;
@@ -63,6 +76,26 @@
 	}
 
 	td {
+		display: block;
+
+		@include media-breakpoint-down('xs') {
+			text-align: right;
+
+			&[data-title]::before {
+				float: left;
+				content: attr(data-title) ': ';
+				font-weight: $font-weight-bold;
+			}
+		}
+
+		@include media-breakpoint-up('sm') {
+			display: table-cell;
+
+			&[data-title]::before {
+				display: none;
+			}
+		}
+
 		&.cart-product {
 			&-price,
 			&-subtotal {
