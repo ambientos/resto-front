@@ -10,6 +10,10 @@
 			line-height: 1.7;
 			box-shadow: 0 8px 17px 0 rgba($black, .2);
 
+			@include media-breakpoint-down('md') {
+				margin-top: 1.5em;
+			}
+
 			p:last-child {
 				margin-bottom: 0;
 			}
@@ -130,6 +134,8 @@
 	}
 
 	&-menu {
+		margin-bottom: 3em;
+
 		> li {
 			display: block;
 
