@@ -1,7 +1,7 @@
 mixin list-ico(list)
 	.list-ico.d-md-flex.flex-md-wrap
 		each itemList in list
-			div(class='list-ico-item _list-'+ itemList.type +' ico d-flex')
+			div(class='list-ico-item _list-'+ itemList.type +' ico d-flex flex-sm-nowrap flex-wrap')
 				.list-ico-item-content
 					if itemList.title
 						h3.list-ico-item-title!= itemList.title

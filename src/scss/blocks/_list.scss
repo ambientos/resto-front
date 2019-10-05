@@ -9,15 +9,14 @@
 				right: $grid-gutter-width;
 				bottom: $grid-gutter-width;
 			}
+			border: {
+				width: 2px;
+				color: $gray-200;
+				top-style: solid;
+			}
 
-			@include media-breakpoint-up("md") {
+			@include media-breakpoint-up('md') {
 				@include flex-width(50%);
-
-				border: {
-					width: 2px;
-					color: $gray-200;
-					top-style: solid;
-				}
 
 				&:nth-child(odd) {
 					border-right-style: solid;
@@ -62,10 +61,20 @@
 
 			&-content {
 				order: 2;
+
+				@include media-breakpoint-down('xs') {
+					@include flex-width(100%);
+
+					margin-top: 1.5em;
+				}
 			}
 
 			&-title {
 				color: $primary;
+
+				@include media-breakpoint-down('xs') {
+					margin-bottom: .5em;
+				}
 			}
 		}
 	}
