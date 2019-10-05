@@ -11,10 +11,10 @@ block content
 					h1.promo-title._home Автоматизация ресторанов
 					.promo-text
 						p Асинхронное ритмическое поле, согласно традиционным представлениям, иллюстрирует флюгель-горн, потому что современная музыка не запоминается. Явление культурологического порядка самостоятельно.
-					.promo-more.d-flex.align-items-center.justify-content-between
+					.promo-more.d-sm-flex.align-items-sm-center.justify-content-sm-between
 						span
 							span.btn-primary.btn Бесплатная консультация
-						span.promo-tel +7 495 232-32-32
+						a.promo-tel(href='tel:+74952323232') +7 495 232-32-32
 
 	.promo-brands
 		.container-inner.container
@@ -23,13 +23,13 @@ block content
 					.promo-brands-title Resto-Service 5 лет на рынке
 					.promo-brands-text
 						p Асинхронное ритмическое поле, согласно традиционным представлениям, иллюстрирует флюгель-горн, потому что современная музыка не запоминается. Явление культурологического порядка самостоятельно. Модальное письмо может быть реализовано на основе принципов центропостоянности и центропеременности, таким образом open-air изящно просветляет пласт. Жесткая ротация образует форшлаг. 
-					.promo-brands-thumb.d-flex.justify-content-end
+					.promo-brands-thumb.d-none.d-md-flex.justify-content-md-end
 						img(
 							src='t/3.png',
 							alt
 						)
 				.col-md-6
-					.promo-brands-thumb
+					.promo-brands-thumb.d-none.d-md-block
 						img(
 							src='t/2.png',
 							alt
@@ -49,58 +49,58 @@ block content
 			.promo-type-list.row
 				- var promoTypeList = [{'thumb': '4', 'title': 'Кафе, Бар, Ресторан'}, {'thumb': '5', 'title': 'Фастфуд, Кофе с собой'}, {'thumb': '6', 'title': 'Пекарня, Магазин'}, {'thumb': '7', 'title': 'Сеть ресторанов'}, {'thumb': '8', 'title': 'Доставка'}, {'thumb': '9', 'title': 'Столовая'}];
 				each promoTypeListItem in promoTypeList
-					.col-md-4
+					.col-md-4.col-sm-6.col-6
 						a.promo-type-item.text-center(href='/')
 							.promo-type-item-title= promoTypeListItem.title
 							.promo-type-item-thumb
-								img(src='t/'+ promoTypeListItem.thumb +'.jpg', alt)
+								img.img-fluid(src='t/'+ promoTypeListItem.thumb +'.jpg', alt)
 
 	.widget._nomargin._light-gray
 		.container-inner.container
 			.promo-adv-container
 				.row
-					.col-md-6
+					.col-sm-6
 						.h1 Нас выбирают, потому что&hellip;
 						p Асинхронное ритмическое поле, согласно традиционным представлениям, иллюстрирует флюгель-горн, потому что современная музыка не запоминается.
-					.col-md-6
+					.col-sm-6
 						.promo-adv._right._first
 							.promo-adv-title.ico._promo-support Поддержка 24/7
 							ul.promo-adv-list
 								li Асинхронное ритмическое поле, согласно традиционным представлениям
 								li Иллюстрирует флюгель-горн, потому что современная музыка не запоминается.
-					.col-md-6
+					.col-sm-6
 						.promo-adv._left
 							.promo-adv-title.ico._promo-consult Обучение и консалтинг
 							ul.promo-adv-list
 								li Нота отталкивает миксолидийский микрохроматический интервал. 
 								li Модальное письмо может быть реализовано каноническую секвенцию
-					.col-md-6
+					.col-sm-6
 						.promo-adv._right
 							.promo-adv-title.ico._promo-install Настройка и инсталляция
 							ul.promo-adv-list
 								li Фузз монотонно начинает голос. Развивая эту тему, соинтервалие иллюстрирует длительностный громкостнoй прогрессийный период. 
 								li Септаккорд регрессийно продолжает диссонансный гипнотический рифф. 
-					.col-md-6
+					.col-sm-6
 						.promo-adv._left
 							.promo-adv-title.ico._promo-kkm Установка и настройка ККМ (ЦТО)
 							ul.promo-adv-list
 								li Развивая эту тему, канал представляет собой равновесный канал, а после исполнения 
 								li Утесовым роли Потехина в "Веселых ребятах" слава артиста стала всенародной. 
 								li Живая сессия, как бы это ни казалось
-					.col-md-6
+					.col-sm-6
 						.promo-adv._right
 							.promo-adv-title.ico._promo-price Гарантия лучшей цены!
 							ul.promo-adv-list
 								li Кризис жанра иллюстрирует мелодический сет. С другой стороны, определение содержания в
 								li Почве железа по Тамму показало, что органическое вещество перемещает удельный лессиваж.
-					.col-md-6
+					.col-sm-6
 						.promo-adv._left
 							.promo-adv-title.ico._promo-service Сопутствующий сервис
 							ul.promo-adv-list
 								li Явление культурологического порядка имитирует такыровидный лизиметр. 
 								li Развивая эту тему, канал представляет собой равновесный канал, а после исполнения
 								li Утесовым роли Потехина в &laquo;Веселых ребятах&raquo; слава 
-					.col-md-6.d-flex.align-items-end
+					.col-sm-6.d-sm-flex.align-items-sm-end
 						.promo-adv-btn
 							a.btn-primary.btn(href='/') Бесплатный тест оборудования
 
@@ -108,38 +108,39 @@ block content
 			.promo-type-list.row
 				- var promoTypeList = [{'thumb': '69', 'title': 'POS- оборудование'}, {'thumb': '70', 'title': 'Система вызова персонала'}, {'thumb': '71', 'title': 'Система видеонаблюдения'}, {'thumb': '72', 'title': 'Модули и лицензии IIKO'}];
 				each promoTypeListItem in promoTypeList
-					.col-md-3
+					.col-lg-3.col-6
 						a.promo-type-item._important.text-center(href='/')
 							.promo-type-item-title= promoTypeListItem.title
 							.promo-type-item-thumb
-								img(src='t/'+ promoTypeListItem.thumb +'.jpg', alt)
+								img.img-fluid(src='t/'+ promoTypeListItem.thumb +'.jpg', alt)
 
 	.widget._nomargin._with-pads._night
 		.widget-title.h1._big._blue Нам доверяют:&nbsp;
-		.carousel-container.container-inner.container(
+		.carousel-container(
 			data-loop='1',
 			data-items='3',
 			data-margin='30'
 		)
-			.promo-cite-carousel.carousel.owl-carousel
-				- var citeList = [{'thumb': '10', 'name': 'Владимир Новополоцкий', 'title': 'Управляющий партнёр, Lucky Ventures', 'excerpt': 'Расчеты предсказывают, что последнее векторное равенство эффективно сменяет интеграл от переменной величины. Динамическое уравнение Эйлера, разделенные узкими линейновытянутыми зонами выветрелых пород, разновозрастно.'}, {'thumb': '11', 'name': 'Лаврентий Гагыдза', 'title': 'Monti\'s Friends, Владелец', 'excerpt': 'Диагностика минерала стационарно учитывает подшипник подвижного объекта, определяя инерционные характеристики системы (массы, моменты инерции входящих.'}, {'thumb': '12', 'name': 'Владимир Новополоцкий', 'title': 'Управляющий партнёр, Lucky Ventures', 'excerpt': 'Ньютона, определяет момент сил, не забывая о том, что интенсивность диссипативных сил, характеризующаяся величиной коэффициента D, должна лежать в определённых пределах. Уравнение возмущенного движения влияет на составляющие.'}, {'thumb': '11', 'name': 'Лаврентий Гагыдза', 'title': 'Monti\'s Friends, Владелец', 'excerpt': 'Диагностика минерала стационарно учитывает подшипник подвижного объекта, определяя инерционные характеристики системы (массы, моменты инерции входящих.'}];
-				each citeListItem in citeList
-					.promo-cite-item
-						.promo-cite-item-thumb
-							img.img-block.img-fluid(src='t/'+ citeListItem.thumb +'.jpg', alt)
-						.promo-cite-item-content
-							.promo-cite-item-name= citeListItem.name
-							.promo-cite-item-title= citeListItem.title
-							.promo-cite-item-excerpt= citeListItem.excerpt
+			.container-inner.container
+				.promo-cite-carousel.carousel.owl-carousel
+					- var citeList = [{'thumb': '10', 'name': 'Владимир Новополоцкий', 'title': 'Управляющий партнёр, Lucky Ventures', 'excerpt': 'Расчеты предсказывают, что последнее векторное равенство эффективно сменяет интеграл от переменной величины. Динамическое уравнение Эйлера, разделенные узкими линейновытянутыми зонами выветрелых пород, разновозрастно.'}, {'thumb': '11', 'name': 'Лаврентий Гагыдза', 'title': 'Monti\'s Friends, Владелец', 'excerpt': 'Диагностика минерала стационарно учитывает подшипник подвижного объекта, определяя инерционные характеристики системы (массы, моменты инерции входящих.'}, {'thumb': '12', 'name': 'Владимир Новополоцкий', 'title': 'Управляющий партнёр, Lucky Ventures', 'excerpt': 'Ньютона, определяет момент сил, не забывая о том, что интенсивность диссипативных сил, характеризующаяся величиной коэффициента D, должна лежать в определённых пределах. Уравнение возмущенного движения влияет на составляющие.'}, {'thumb': '11', 'name': 'Лаврентий Гагыдза', 'title': 'Monti\'s Friends, Владелец', 'excerpt': 'Диагностика минерала стационарно учитывает подшипник подвижного объекта, определяя инерционные характеристики системы (массы, моменты инерции входящих.'}];
+					each citeListItem in citeList
+						.promo-cite-item
+							.promo-cite-item-thumb
+								img.img-block.img-fluid(src='t/'+ citeListItem.thumb +'.jpg', alt)
+							.promo-cite-item-content
+								.promo-cite-item-name= citeListItem.name
+								.promo-cite-item-title= citeListItem.title
+								.promo-cite-item-excerpt= citeListItem.excerpt
 
-			.promo-brands-thumbs.d-flex.align-items-center.justify-content-around
-				- var brandThumbs = ['13', '14', '15', '16', '17', '18'];
-				each brandThumbsItem in brandThumbs
-					.promo-brands-thumbs-item
-						img(src='t/'+ brandThumbsItem +'.png', alt)
+				.promo-brands-thumbs.row.align-items-center
+					- var brandThumbs = ['13', '14', '15', '16', '17', '18'];
+					each brandThumbsItem in brandThumbs
+						.col-lg.col-sm-4.col-6.promo-brands-thumbs-item
+							img.img-fluid(src='t/'+ brandThumbsItem +'.png', alt)
 
-			.d-flex.justify-content-around
-				a.btn.btn-sm(href='/') Оставить отзыв
+				.d-flex.justify-content-around
+					a.btn.btn-sm(href='/') Оставить отзыв
 
 	.widget._nomargin._with-pads
 		.container-inner.container
@@ -161,7 +162,7 @@ block content
 			.knowledge-article-list.row
 				- var articleList = [{'thumb': '19.jpg', 'title': 'Позиционирование на рынке наиболее полно изменяет имидж предприятия', 'excerpt': 'План размещения не так уж очевиден. Представляется логичным, что продвижение проекта амбивалентно. Соц-дем характеристика аудитории позиционирует эмпирический критерий сходимости'}, {'thumb': '20.jpg', 'title': 'Стоит отметить, что дифференциальное уравнение', 'excerpt': 'Решительно транслирует положительный график функции, откуда следует доказываемое равенство. Искусство медиапланирования уравновешивает связанный экстремум функции'}, {'thumb': '21.jpg', 'title': 'В соответствии с законом больших чисел, медиаплан', 'excerpt': 'Продуцирует экспериментальный нестандартный подход, откуда следует доказываемое равенство. Разрыв функции основан на анализе телесмотрения.'}];
 				each articleListItem in articleList
-					a.knowledge-article-item.col-md-4(href='/')
+					a.knowledge-article-item.col-md-4.col-sm-6(href='/')
 						figure.knowledge-article-item-thumb
 							img.img-block.img-fluid(
 								src='t/'+ articleListItem.thumb,

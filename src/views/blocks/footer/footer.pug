@@ -4,7 +4,7 @@ footer.footer
 	.footer-main
 		.container
 			.row
-				.col-md-3
+				.col-md-3.col-sm-6.d-none.d-sm-block
 					figure.footer-logo
 						a.d-flex.flex-column(href='/')
 							img(
@@ -18,16 +18,16 @@ footer.footer
 								alt
 							)
 
-				.col-md
+				.col-md.col-6
 					+menu-with-title('Решения', ['Для ресторанов', 'Для кафе', 'Для баров', 'Для фаст-фудов', 'Для сети ресторанов', 'Для столовых'])
 
-				.col-md
+				.col-md.col-sm-4.col-6
 					+menu-with-title('Услуги', ['Настройка и инсталяция', 'Обучение персонала', 'Сервисная поддержка 24/7', 'Онлайн кассы и ЦТО', 'ЕГИАС', 'Хостинг сервера IIKO'])
 
-				.col-md
+				.col-md.col-sm-4.col-6
 					+menu-with-title('Магазин', ['Системы вызова персонала', 'Видеонаблюдение', 'POS-оборудование', 'IIKO модули и лицензии'])
 
-				.col-md
+				.col-md.col-sm-4.col-6
 					+menu-with-title(0, ['О нас', 'База знаний', 'Почему IIKO', 'Контакты'], 'important')
 					+menu-with-title(0, ['Скачать TeamViewer', 'Service desk'])
 
@@ -39,13 +39,13 @@ footer.footer
 					- var socials = [ 'fb', 'wa', 'in' ]
 						each socialType in socials
 							a(href='/', class='footer-social-item navi-social-item _bottom-'+ socialType +' ico') &nbsp;
-				.footer-phone
+				.footer-phone.d-none.d-lg-block
 					a.navi-with-icon.d-flex.align-items-center.tel(href='tel:+74952323232')
 						include ../main/i/tele.svg
 						span +7 (495) 232-32-32
-				.footer-mail
+				.footer-mail.d-none.d-sm-block
 					a.navi-with-icon.d-flex.align-items-center(href='mailto:info@terminalmsk.com')
 						include ./i/mail.svg
 						span info@terminalmsk.com
-				.footer-callback
+				.footer-callback.d-none.d-md-block
 					span.btn.btn-sm.btn-primary Позвоните мне!

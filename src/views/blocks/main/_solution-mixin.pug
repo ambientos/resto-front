@@ -2,14 +2,14 @@ mixin solution(object)
 	div(class='solutions-item _'+ object.type)
 		.solutions-item-row
 			.row.align-items-center
-				.solutions-item-title.col!= object.title
-				.solutions-item-more.col
+				.solutions-item-title.col-lg.col-12!= object.title
+				.solutions-item-more.col-lg.col-sm
 					a.btn-secondary.btn-wide.btn(href='/') Подробнее
-				.solutions-item-price-c._first.col
+				.solutions-item-price-c._first.col-sm
 					if object.price1.v
 						span.solutions-item-price= object.price1.v
 					span.solutions-item-price-l= object.price1.l
-				.solutions-item-price-c._second.col
+				.solutions-item-price-c._second.col-sm
 					if object.price2.v
 						span.solutions-item-price= object.price2.v
 					span.solutions-item-price-l!= object.price2.l

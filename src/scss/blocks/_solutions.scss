@@ -32,7 +32,14 @@
 		}
 
 		&-title {
-			@include flex-width(28%);
+			@include media-breakpoint-down('md') {
+				margin-bottom: 2em;
+			}
+
+			@include media-breakpoint-up('lg') {
+				@include flex-width(28%);
+			}
+
 			padding-left: $padding-icon;
 			font: {
 				family: $font-sub;
@@ -55,30 +62,38 @@
 				}
 				line-height: 1.2;
 
-				&._first {
-					@include flex-width(22%);
+				@include media-breakpoint-down('sm') {
+					margin: 1.5em 0 1em;
 				}
 
-				&._second {
-					@include flex-width(27%);
+				@include media-breakpoint-up('lg') {
+					&._first {
+						@include flex-width(22%);
+					}
+
+					&._second {
+						@include flex-width(27%);
+					}
 				}
 			}
 		}
 
 		&-descr {
-			&._first {
-				padding: {
-					left: $padding-icon;
-					right: $grid-gutter-width;
+			@include media-breakpoint-up('lg') {
+				&._first {
+					padding: {
+						left: $padding-icon;
+						right: $grid-gutter-width;
+					}
 				}
-			}
 
-			&._second {
-				@include flex-width(33%);
-			}
+				&._second {
+					@include flex-width(33%);
+				}
 
-			&._third {
-				@include flex-width(27%);
+				&._third {
+					@include flex-width(27%);
+				}
 			}
 
 			ol {

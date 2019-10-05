@@ -68,7 +68,13 @@
 	}
 
 	&-copy {
-		@include flex-width(260px);
+		@include media-breakpoint-up('md') {
+			@include flex-width(23%);
+		}
+	}
+
+	&-mail {
+		padding-left: 1em;
 	}
 
 	a {
