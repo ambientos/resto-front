@@ -1254,11 +1254,12 @@
   background-position: 50% 50%;
   background-size: cover;
   z-index: 1; }
-  .calc-form-item {
-    padding: 2em 0; }
-    .calc-form-item label {
-      font-size: 1.125rem;
-      font-weight: 700; }
+  @media (min-width: 768px) {
+    .calc-form-item {
+      padding: 2em 0; } }
+  .calc-form-item label {
+    font-size: 1.125rem;
+    font-weight: 700; }
   .calc-form-qty {
     display: block;
     position: relative;
@@ -1315,6 +1316,9 @@
     border-style: dashed;
     border-color: #fff;
     border-radius: 1.5rem; }
+    @media (max-width: 767.98px) {
+      .calc-form-info {
+        margin: .5em 0; } }
   .calc-form-submit {
     text-align: center; }
     .calc-form-submit .btn {
