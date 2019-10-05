@@ -1,13 +1,15 @@
 .procs {
 	$padding-top: 88px;
 
-	&::before {
-		display: block;
-		position: relative;
-		top: $padding-top + $grid-gutter-width * .8 * .55;
-		margin: 0 7%;
-		content: '';
-		border-top: 2px solid $primary;
+	@include media-breakpoint-up('md') {
+		&::before {
+			display: block;
+			position: relative;
+			top: $padding-top + $grid-gutter-width * .8 * .55;
+			margin: 0 7%;
+			content: '';
+			border-top: 2px solid $primary;
+		}
 	}
 
 	&-list {
@@ -33,19 +35,21 @@
 				content: '';
 			}
 
-			&::before {
-				$size: $grid-gutter-width * .8;
+			@include media-breakpoint-up('md') {
+				&::before {
+					$size: $grid-gutter-width * .8;
 
-				width: $size;
-				height: $size;
-				margin: auto;
-				border: {
-					width: 7px;
-					style: solid;
-					color: $primary;
-					radius: 50%;
+					width: $size;
+					height: $size;
+					margin: auto;
+					border: {
+						width: 7px;
+						style: solid;
+						color: $primary;
+						radius: 50%;
+					}
+					background-color: $white;
 				}
-				background-color: $white;
 			}
 
 			&::after {
