@@ -151,16 +151,26 @@
 	//
 
 	&._social {
-		$size: $grid-gutter-width * 2;
-
-		width: $size * .6;
-		height: $size * .6;
+		width: 60%;
+		height: 60%;
 
 		&-item {
-			width: $size;
-			height: $size;
 			border-radius: 50%;
 			background-color: $gray-200;
+
+			@include media-breakpoint-down('md') {
+				$size: $grid-gutter-width * 1.5;
+
+				width: $size;
+				height: $size;
+			}
+
+			@include media-breakpoint-up('lg') {
+				$size: $grid-gutter-width * 2;
+
+				width: $size;
+				height: $size;
+			}
 
 			&:not(:last-child),
 			&:first-child {

@@ -133,9 +133,16 @@
 				display: block;
 				position: relative;
 				width: 100%;
-				padding: $padding $padding $padding * .5 $padding;
 				border-bottom: $grid-gutter-width * .5 solid $white;
 				background-color: $white;
+
+				@include media-breakpoint-down('md') {
+					padding: $padding * .5 $padding * .5 $padding * .1 $padding * .5;
+				}
+
+				@include media-breakpoint-up('lg') {
+					padding: $padding $padding $padding * .5 $padding;
+				}
 
 				@include transition;
 
@@ -170,8 +177,19 @@
 	&-filter {
 		margin-bottom: 0;
 
+		&-container {
+			@include media-breakpoint-down('md') {
+				margin-top: 2em;
+			}
+		}
+
 		&-label {
+			display: block;
 			margin-right: 1em;
+
+			@include media-breakpoint-down('xs') {
+				margin-bottom: 1em;
+			}
 		}
 
 		&-label,
@@ -180,6 +198,7 @@
 		}
 
 		li {
+			display: inline-block;
 			margin: 0 .2em;
 
 			&.active {

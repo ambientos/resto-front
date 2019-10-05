@@ -10,31 +10,31 @@ block content
 		.widget
 			h2.widget-title._sub Бесплатный учебник по iiko
 			ul.list-links.d-sm-flex.flex-wrap
-				li.list-links-item.d-flex.col-md-3
+				li.list-links-item.d-flex.col-md-3.col-sm-4
 					a.list-links-item-link.d-flex.align-items-center(href='/')
 						include ./blocks/main/i/notebook.svg
 						span iikoOffice
-				li.list-links-item.d-flex.col-md-3
+				li.list-links-item.d-flex.col-md-3.col-sm-4
 					a.list-links-item-link.d-flex.align-items-center(href='/')
 						include ./blocks/main/i/build.svg
 						span iikoFront
-				li.list-links-item.d-flex.col-md-3
+				li.list-links-item.d-flex.col-md-3.col-sm-4
 					a.list-links-item-link.d-flex.align-items-center(href='/')
 						include ./blocks/main/i/delivery.svg
 						span iikoDelivery
-				li.list-links-item.d-flex.col-md-3
+				li.list-links-item.d-flex.col-md-3.col-sm-4
 					a.list-links-item-link.d-flex.align-items-center(href='/')
 						include ./blocks/main/i/card.svg
 						span iicoCard
-				li.list-links-item.d-flex.col-md-3
+				li.list-links-item.d-flex.col-md-3.col-sm-4
 					a.list-links-item-link.d-flex.align-items-center(href='/')
 						include ./blocks/main/i/api.svg
 						span API
-				li.list-links-item.d-flex.col-md-3
+				li.list-links-item.d-flex.col-md-3.col-sm-4
 					a.list-links-item-link.d-flex.align-items-center(href='/')
 						include ./blocks/main/i/scheme.svg
 						span iicoChain
-				li.list-links-item.d-flex.col-md-3
+				li.list-links-item.d-flex.col-md-3.col-sm-4
 					a.list-links-item-link.d-flex.align-items-center(href='/')
 						include ./blocks/main/i/spec.svg
 						span Cпец. решения
@@ -46,7 +46,7 @@ block content
 			.knowledge-video.row
 				- var videoList = ['Основы работы с BackOffice IIKO (основы + складской учет)', 'Основы работы с front iiko (Касса + официант)', 'Управление финансами', 'Выгрузка в 1С', 'Это полезно знать', 'Вебинары по дополнительным модулям iiko'];
 				each videoListItemTitle in videoList
-					a.knowledge-video-item.col-md-2(href='/')
+					a.knowledge-video-item.col-md-2.col-sm-3.col-6(href='/')
 						figure.knowledge-video-item-thumb
 							img.img-block.img-fluid(
 								src='t/58.jpg'
@@ -73,19 +73,19 @@ block content
 	.widget._with-pads._nomargin._gray
 		.container-inner.container
 			.row.align-items-center
-				.col
+				.col-md
 					h2.widget-title._primary Статьи от Resto-Service
-				.col.d-flex.align-items-center.justify-content-end
+				.list-filter-container.col-md.d-sm-flex.align-items-sm-center.justify-content-sm-end
 					span.list-filter-label Показывать:
 					- var listFilter = ['Все', 'Советы', 'Технологии', 'Экономика', 'Бухгалтерия'];
-					ul.d-flex.align-items-center.list-filter.list-unstyled
+					ul.d-sm-flex.align-items-center.list-filter.list-unstyled
 						each listFilterItem, index in listFilter
 							li(class=(0 === index ? 'active' : undefined))
 								a(href='/')= listFilterItem
 			.knowledge-article-list.row
 				- var articleList = [{'thumb': '59.jpg', 'title': 'Позиционирование на рынке наиболее полно изменяет имидж предприятия', 'excerpt': 'План размещения не так уж очевиден. Представляется логичным, что продвижение проекта амбивалентно. Соц-дем характеристика аудитории позиционирует эмпирический критерий сходимости'}, {'thumb': '60.jpg', 'title': 'Стоит отметить, что дифференциальное уравнение', 'excerpt': 'Решительно транслирует положительный график функции, откуда следует доказываемое равенство. Искусство медиапланирования уравновешивает связанный экстремум функции'}, {'thumb': '61.jpg', 'title': 'В соответствии с законом больших чисел, медиаплан', 'excerpt': 'Продуцирует экспериментальный нестандартный подход, откуда следует доказываемое равенство. Разрыв функции основан на анализе телесмотрения.'}, {'thumb': '62.jpg', 'title': 'Новация противозаконна', 'excerpt': 'Конфиденциальность, как справедливо считает Ф.Энгельс, откровенна. Причиненный ущерб правомерно притягивает оппортунический гомеостаз'}, {'thumb': '63.jpg', 'title': 'В связи с этим нужно подчеркнуть', 'excerpt': 'Закон представляет собой гендерный контраст. Банкротство, как неоднократно наблюдалось при чрезмерном вмешательстве государства в данные правоотношения'}, {'thumb': '64.jpg', 'title': 'Стоит отметить, что дифференциальное уравнение', 'excerpt': 'Решительно транслирует положительный график функции, откуда следует доказываемое равенство. Искусство медиапланирования уравновешивает связанный экстремум функции'}, {'thumb': '65.jpg', 'title': 'Фрустрация, как справедливо считает', 'excerpt': 'Фрустрация, как справедливо считает Ф.Энгельс, спонтанно интегрирует субсидиарный платежный документ, что не имеет аналогов в англо-саксонской правовой системе'}, {'thumb': '66.jpg', 'title': 'Позиционирование на рынке наиболее полно изменяет имидж предприятия', 'excerpt': 'План размещения не так уж очевиден. Представляется логичным, что продвижение проекта амбивалентно. Соц-дем характеристика аудитории позиционирует эмпирический критерий сходимости'}, {'thumb': '67.jpg', 'title': 'В соответствии с законом больших чисел, медиаплан', 'excerpt': 'Продуцирует экспериментальный нестандартный подход, откуда следует доказываемое равенство. Разрыв функции основан на анализе телесмотрения'}];
 				each articleListItem in articleList
-					a.knowledge-article-item.col-md-4(href='/')
+					a.knowledge-article-item.col-md-4.col-sm-6(href='/')
 						figure.knowledge-article-item-thumb
 							img.img-block.img-fluid(
 								src='t/'+ articleListItem.thumb,
