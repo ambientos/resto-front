@@ -2146,7 +2146,7 @@ textarea.form-control {
       padding-right: 2rem; }
       .form-input-with-button .form-control {
         padding-right: 150px; } }
-  @media (max-width: 991.98px) {
+  @media (max-width: 575.98px) {
     .form-input-with-button .btn {
       margin-top: 1.5em; } }
   @media (min-width: 576px) {

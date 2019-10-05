@@ -401,7 +401,7 @@ textarea.form-control {
   }
 
   .btn {
-    @include media-breakpoint-down('md') {
+    @include media-breakpoint-down('xs') {
       margin-top: 1.5em;
     }
 
