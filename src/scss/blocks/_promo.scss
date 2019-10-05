@@ -48,13 +48,24 @@
 
 	&-breadcrumbs {
 		color: $white;
+
+		@include media-breakpoint-down('md') {
+			margin-top: 0;
+		}
 	}
 
 	&-content {
 		&:not(._home) {
 			max-width: 448px;
-			padding: $grid-gutter-width * 2;
 			background-color: $white;
+
+			@include media-breakpoint-down('md') {
+				padding: $grid-gutter-width;
+			}
+
+			@include media-breakpoint-up('lg') {
+				padding: $grid-gutter-width * 2;
+			}
 		}
 
 		&._home {

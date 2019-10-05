@@ -631,11 +631,19 @@
 
 .promo-breadcrumbs {
   color: #fff; }
+  @media (max-width: 991.98px) {
+    .promo-breadcrumbs {
+      margin-top: 0; } }
 
 .promo-content:not(._home) {
   max-width: 448px;
-  padding: 60px;
   background-color: #fff; }
+  @media (max-width: 991.98px) {
+    .promo-content:not(._home) {
+      padding: 30px; } }
+  @media (min-width: 992px) {
+    .promo-content:not(._home) {
+      padding: 60px; } }
 
 .promo-content._home {
   max-width: 570px;
