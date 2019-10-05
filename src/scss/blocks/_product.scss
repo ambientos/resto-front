@@ -233,6 +233,19 @@
 		}
 	}
 
+	&-nav {
+		@include media-breakpoint-down('sm') {
+			margin-bottom: 2em;
+		}
+
+		@include media-breakpoint-down('lg') {
+			.btn {
+				display: block;
+				margin: 1em .5em 1em 0;
+			}
+		}
+	}
+
 	&-chars {
 		$padding-x: 1em;
 
@@ -281,6 +294,12 @@
 		&,
 		&-item {
 			border: 1px solid $gray-200;
+		}
+
+		&-carousel {
+			&.owl-carousel .owl-nav {
+				top: 22%;
+			}
 		}
 	}
 
