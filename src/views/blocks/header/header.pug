@@ -4,21 +4,21 @@ header.header
 			.d-flex.flex-wrap.flex-md-nowrap.align-items-center.justify-content-around
 				figure.header-logo
 					a(href='/')
-						img(
+						img.header-logo-thumb(
 							src='i/logo-thumb.svg',
 							width='60',
 							alt='Resto Service'
 						)
-						img(
+						img.header-logo-title(
 							src='i/logo-title.svg',
 							width='80',
 							alt
 						)
 
-				.header-callback
+				.header-callback.d-none.d-lg-block
 					span.btn.btn-sm.btn-primary Позвоните мне!
 
-				.header-phone
+				.header-phone.d-none.d-sm-block
 					a.navi-with-icon.d-flex.align-items-center.tel(href="tel:+74952323232")
 						include ../main/i/tele.svg
 						span.header-phone-text +7 (495) 232-32-32
@@ -37,8 +37,9 @@ header.header
 
 	nav.header-nav.navbar.navbar-dark.navbar-expand-lg
 		.container
-			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-				span.navbar-toggler-icon
+			.header-nav-toggler.d-flex.d-lg-none.justify-content-end
+				button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+					span.navbar-toggler-icon
 
 			.collapse.navbar-collapse.justify-content-between#navbarSupportedContent
 				ul.header-nav-list.navbar-nav
@@ -52,6 +53,6 @@ header.header
 										li.nav-item
 											a.nav-link(href='/')= menuListSubItem
 
-				form.form-inline
+				form.header-nav-search.form-inline
 					button.btn.btn-ico(type='button')
 						include ./i/search.svg
