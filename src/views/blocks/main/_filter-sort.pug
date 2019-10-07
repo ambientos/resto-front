@@ -1,4 +1,6 @@
 .list-filter-container.d-flex.align-items-center.justify-content-end
 	span.list-filter-label Сортировать:
-	select
-		option По цене
+	select.form-select
+		- var options = ['По цене'];
+		each option in options
+			option= option

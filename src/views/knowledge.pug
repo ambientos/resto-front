@@ -4,6 +4,9 @@ block meta
 	title База знаний
 
 block content
+	.container-inner.container
+		+breadcrumbs({'items': ['Главная', 'База знаний']})
+
 	+knowledge-form({'title': 'База знаний', 'placeholder': 'Что вас интересует?'})
 
 	.container-inner.container

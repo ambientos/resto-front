@@ -412,3 +412,36 @@ textarea.form-control {
     }
   }
 }
+
+
+//
+// Custom Select
+//
+
+.form-select {
+  padding: .8em 1.7em .8em .7em;
+  font: {
+    size: .875rem;
+    weight: $font-weight-bold;
+  }
+  color: $secondary;
+  border: none;
+  background: {
+    color: $gray-200;
+    repeat: no-repeat;
+    position: calc(100% - 8px) 50%;
+    image: url('#{$img-dir}select-down.svg');
+    size: 8px auto;
+  }
+  appearance: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 $black;
+  }
+}

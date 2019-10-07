@@ -5,7 +5,9 @@ block meta
 
 block content
 	.entry-container
-		.container
+		.container-inner.container
+			+breadcrumbs({'items': ['Главная', 'База знаний', 'Результаты поиска']})
+
 			.entry
 				header.entry-header
 					.entry-title._sub.d-sm-flex.align-items-md-center.justify-content-sm-between

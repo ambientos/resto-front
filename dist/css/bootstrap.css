@@ -2155,6 +2155,27 @@ textarea.form-control {
       top: -.2em;
       right: 0; } }
 
+.form-select {
+  padding: .8em 1.7em .8em .7em;
+  font-size: .875rem;
+  font-weight: 700;
+  color: #26303b;
+  border: none;
+  background-color: #e9ecef;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) 50%;
+  background-image: url("../i/select-down.svg");
+  background-size: 8px auto;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none; }
+  .form-select:focus {
+    outline: none; }
+  .form-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000; }
+
 .btn {
   display: inline-block;
   font-weight: 700;

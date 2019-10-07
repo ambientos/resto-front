@@ -18,12 +18,15 @@ block content
 					ul.list-verify.list-unstyled
 						each item in ['Скан ИНН', 'Скан ОГРН', 'Скан паспорта ген. директора двух страниц', 'Скан снилса ген. директора или индивидуального предпринимателя', 'Учетная карточка в электронном виде (не скан)']
 							li= item
+					p
+						| также вы можете отправить сканы документов на почту 
+						a(href='mailto:info@terminalmsk.com') info@terminalmsk.com
 
 				.col-md-6
 					form
 						.form-group
 							input.form-control-file(type='file', multiple)
-						.form-group.text-right
+						.form-group
 							input.btn-primary.btn-sm.btn(type='submit', value='Отправить документы')
 
 	.widget._with-pads._dark._important
