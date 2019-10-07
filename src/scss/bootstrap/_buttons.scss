@@ -98,6 +98,11 @@ fieldset:disabled a.btn {
   }
 }
 
+.btn-light {
+  border-color: $secondary;
+  background-color: rgba($white, .3);
+}
+
 
 //
 // Link buttons
