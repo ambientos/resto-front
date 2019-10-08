@@ -27,6 +27,7 @@
 				top: $padding-y;
 				bottom: $padding-y;
 			}
+			background-size: cover;
 		}
 
 		@include media-breakpoint-up('lg') {
@@ -35,14 +36,7 @@
 				top: 1px;
 				bottom: $grid-gutter-width * .8;
 			}
-		}
-
-		&:not(._cover-bg) {
 			background-size: auto 100%;
-		}
-
-		&._cover-bg {
-			background-size: cover;
 		}
 	}
 

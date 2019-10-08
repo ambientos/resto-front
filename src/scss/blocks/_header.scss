@@ -55,6 +55,12 @@
 		}
 	}
 
+	&-callback {
+		.btn {
+			font-size: 80%;
+		}
+	}
+
 	&-phone-text {
 		font: {
 			family: $font-sub;
@@ -69,7 +75,7 @@
 		padding-left: $grid-gutter-width * 1.5;
 		font: {
 			family: $font-sub;
-			size: .9375rem;
+			size: 1.0943rem;
 			weight: $font-weight-extra-bold;
 		}
 		letter-spacing: .1ex;
@@ -132,7 +138,7 @@
 				position: relative;
 				font: {
 					family: $font-sub;
-					size: .9375rem;
+					size: 1.0943rem;
 					weight: $font-weight-extra-bold;
 				}
 				text-transform: uppercase;
