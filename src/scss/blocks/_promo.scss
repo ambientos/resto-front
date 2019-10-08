@@ -14,6 +14,8 @@
 }
 
 .promo {
+	position: relative;
+
 	&-container {
 		background: {
 			repeat: no-repeat;
@@ -130,7 +132,13 @@
 		}
 
 		@include media-breakpoint-up('lg') {
-			padding: 6em 0 4em;
+			$margin-y: 141px;
+
+			margin-top: -$margin-y;
+			padding: {
+				top: calc(6em + #{$margin-y});
+				bottom: 4em;
+			}
 		}
 
 		&-title {
